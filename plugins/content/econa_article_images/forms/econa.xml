@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="file_intro" class="hidden econa-file-field" hiddenLabel="true" type="file"/>
+		<field name="file_full" class="hidden econa-file-field" hiddenLabel="true" type="file"/>
+		<field name="path_intro" class="econa-path-field" hiddenLabel="true" preview="false" type="media"/>
+		<field name="path_full" class="econa-path-field" hiddenLabel="true" preview="false" type="media"/>
+	</fieldset>
+</form>

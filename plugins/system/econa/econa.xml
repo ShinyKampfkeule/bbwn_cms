@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension group="system" method="upgrade" type="plugin" version="3.4">
+	<name>plg_system_econa</name>
+	<author>Lefteris Kavadas</author>
+	<creationDate>May 2022</creationDate>
+	<copyright>Lefteris Kavadas / firecoders.com</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<authorEmail>info@firecoders.com</authorEmail>
+	<authorUrl>www.firecoders.com</authorUrl>
+	<version>1.8.5</version>
+	<description>PLG_SYSTEM_ECONA_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="econa">econa.php</filename>
+		<folder>language</folder>
+		<folder>observer</folder>
+	</files>
+</extension>

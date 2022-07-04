@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="econa">
+		<fieldset addfieldpath="/plugins/fields/econa/fields" label="PLG_FIELDS_ECONA_IMAGE_LABEL" name="econa">
+			<field hint="PLG_FIELDS_ECONA_PREVIEW_LABEL" name="preview" type="econaFieldsImage"/>
+			<field description="PLG_FIELDS_ECONA_CAPTION_DESC" hint="PLG_FIELDS_ECONA_CAPTION_LABEL" name="caption" type="text" class="econa-caption-field"/>
+			<field description="PLG_FIELDS_ECONA_CREDITS_DESC" hint="PLG_FIELDS_ECONA_CREDITS_LABEL" name="credits" type="text" class="econa-credits-field"/>
+			<field description="PLG_FIELDS_ECONA_ALT_DESC" hint="PLG_FIELDS_ECONA_ALT_LABEL" name="alt" type="text" class="econa-alt-field" />
+			<field description="PLG_FIELDS_ECONA_FILENAME_DESC" hint="PLG_FIELDS_ECONA_FILENAME_LABEL" name="filename" type="text" class="econa-filename-field"/>
+			<field name="upload" class="econa-upload-field" type="hidden"/>
+			<field name="delete" class="econa-delete-field" type="hidden"/>
+			<field name="context" class="econa-context-field" type="hidden"/>
+			<field hint="PLG_FIELDS_ECONA_UPLOAD_LABEL" name="file" type="file" class="hidden econa-file-field"/>
+			<field hint="PLG_FIELDS_ECONA_PATH_LABEL" name="path" preview="false" type="media" class="econa-path-field"/>
+		</fieldset>
+	</fields>
+</form>

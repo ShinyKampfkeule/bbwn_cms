@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension group="content" method="upgrade" type="plugin" version="3.4">
+	<name>plg_content_econa</name>
+	<author>Lefteris Kavadas</author>
+	<creationDate>May 2022</creationDate>
+	<copyright>Lefteris Kavadas / firecoders.com</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<authorEmail>info@firecoders.com</authorEmail>
+	<authorUrl>www.firecoders.com</authorUrl>
+	<version>1.8.5</version>
+	<description>PLG_CONTENT_ECONA_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="econa">econa.php</filename>
+		<folder>css</folder>
+		<folder>fields</folder>
+		<folder>forms</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>tables</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="plugins/content/econa/fields">
+			<fieldset name="basic">
+				<field type="note" description="PLG_CONTENT_ECONA_NOTE" />
+				<field class="btn-group btn-group-yesno" default="0" label="PLG_CONTENT_ECONA_ENABLE_IMAGE_TAB" name="enable_image_tab" type="radio">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field class="btn-group btn-group-yesno" default="1" label="PLG_CONTENT_ECONA_AUTO_EDIT_WHEN_CHANGED_LABEL" description="PLG_CONTENT_ECONA_AUTO_EDIT_WHEN_CHANGED_DESC" name="auto_edit" type="radio">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="sizes"
+					type="repeatable"
+					maximum="10"
+					select="PLG_CONTENT_ECONA_CONFIGURE"
+					icon="cog"
+					label="PLG_CONTENT_ECONA_IMAGE_SIZES"
+					default='{"label":["Small","Medium","Large"],"identifier":["S","M", "L"],"width":["300","600", "900"], "quality":["65", "80", "95"]}'>
+					<fieldset hidden="true" name="sizes_modal" repeat="true">
+						<field default="" name="label" label="PLG_CONTENT_ECONA_LABEL" type="text"/>
+						<field default="" name="identifier" label="PLG_CONTENT_ECONA_IDENTIFIER" type="text" filter="cmd" size="3" maxLength="3"/>
+						<field default="300" name="width" label="PLG_CONTENT_ECONA_WIDTH" max="2000" min="0" step="1" type="number" size="3"/>
+						<field default="100" name="quality" label="PLG_CONTENT_ECONA_QUALITY" max="100" min="5" type="number" size="3"/>
+					</fieldset>
+				</field>
+				<field class="btn-group btn-group-yesno" default="1" label="PLG_CONTENT_ECONA_CONVERT_TO_JPEG" description="PLG_CONTENT_ECONA_CONVERT_TO_JPEG_DESC" name="jpeg" type="radio">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field class="btn-group btn-group-yesno" default="1" label="PLG_CONTENT_ECONA_CSS_LABEL" name="css" type="radio">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="aspect_ratios"
+					layout="joomla.form.field.subform.repeatable-table"
+					type="subform"
+					formsource="plugins/content/econa/forms/ratio.xml"
+					multiple="true"
+					label="PLG_CONTENT_ECONA_ASPECT_RATIOS_LABEL"
+					description="PLG_CONTENT_ECONA_ASPECT_RATIOS_DESC"/>
+				<field class="btn-group btn-group-yesno" default="1" label="PLG_CONTENT_ECONA_FREE_ASPECT_RATIO_LABEL" name="free_aspect_ratio" type="radio">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field type="spacer" hr="true"/>
+				<field type="spacer" label="PLG_CONTENT_ECONA_ARTICLE_OPTIONS" class="text-info"/>
+				<field label="PLG_CONTENT_ECONA_IMAGE_LABEL" description="PLG_CONTENT_ECONA_IMAGE_LABEL_RESPONSIVE_DESC" name="article_image" type="econacontentimagesize" multiple="true" size="10"></field>
+				<field label="PLG_CONTENT_ECONA_SIZES_ATTRIBUTE" description="PLG_CONTENT_ECONA_SIZES_ATTRIBUTE_DESC" name="article_image_sizes_attribute" type="text" hint="PLG_CONTENT_ECONA_CONTENT_IMAGES_DEFAULT_SIZES_ATTRIBUTE_EXAMPLE"/>
+				<field class="btn-group btn-group-yesno" default="1" label="PLG_CONTENT_ECONA_CAPTION_LABEL" name="article_caption" type="radio">
+					<option value="1">PLG_CONTENT_ECONA_SHOW</option>
+					<option value="0">PLG_CONTENT_ECONA_HIDE</option>
+				</field>
+				<field class="btn-group btn-group-yesno" default="1" label="PLG_CONTENT_ECONA_CREDITS_LABEL" name="article_credits" type="radio">
+					<option value="1">PLG_CONTENT_ECONA_SHOW</option>
+					<option value="0">PLG_CONTENT_ECONA_HIDE</option>
+				</field>
+				<field label="PLG_CONTENT_ECONA_MODAL" description="PLG_CONTENT_ECONA_MODAL_DESC" name="article_modal" type="econacontentimagesize" class="chzn-color-state">
+					<option value="0">PLG_CONTENT_DISABLED</option>
+				</field>
+				<field type="spacer" hr="true"/>
+				<field type="spacer" label="PLG_CONTENT_ECONA_LIST_OPTIONS" class="text-info"/>
+				<field label="PLG_CONTENT_ECONA_IMAGE_LABEL" description="PLG_CONTENT_ECONA_IMAGE_LABEL_RESPONSIVE_DESC" name="list_image" type="econacontentimagesize" multiple="true" size="10"></field>
+				<field label="PLG_CONTENT_ECONA_SIZES_ATTRIBUTE" description="PLG_CONTENT_ECONA_SIZES_ATTRIBUTE_DESC" name="list_image_sizes_attribute" type="text" hint="PLG_CONTENT_ECONA_CONTENT_IMAGES_DEFAULT_SIZES_ATTRIBUTE_EXAMPLE"/>
+				<field class="btn-group btn-group-yesno" default="0" label="PLG_CONTENT_ECONA_CAPTION_LABEL" name="list_caption" type="radio">
+					<option value="1">PLG_CONTENT_ECONA_SHOW</option>
+					<option value="0">PLG_CONTENT_ECONA_HIDE</option>
+				</field>
+				<field class="btn-group btn-group-yesno" default="0" label="PLG_CONTENT_ECONA_CREDITS_LABEL" name="list_credits" type="radio">
+					<option value="1">PLG_CONTENT_ECONA_SHOW</option>
+					<option value="0">PLG_CONTENT_ECONA_HIDE</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

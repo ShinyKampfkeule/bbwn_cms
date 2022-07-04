@@ -1,0 +1,119 @@
+/**
+ * @author      Lefteris Kavadas
+ * @copyright   Copyright (c) 2016 - 2022 Lefteris Kavadas / firecoders.com
+ * @license     GNU General Public License version 3 or later
+ */
+@font-face {
+  font-family: 'econa';
+  src: url('../fonts/econa.eot?8e8h9v');
+  src: url('../fonts/econa.eot?8e8h9v#iefix') format('embedded-opentype'), url('../fonts/econa.ttf?8e8h9v') format('truetype'), url('../fonts/econa.woff?8e8h9v') format('woff'), url('../fonts/econa.svg?8e8h9v#econa') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="econa-icon-"], [class*=" econa-icon-"] {
+  font-family: 'econa';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.econa-icon-uniF07D:before {
+  content: "\f07d";
+}
+
+.econa-icon-uniF07E:before {
+  content: "\f07e";
+}
+
+.econa-container {
+  max-width: 1000px;
+}
+
+.econa-preview-image {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border: 1px solid #b3b3b3;
+  transition: opacity .50s ease-in-out;
+  -moz-transition: opacity .50s ease-in-out;
+  -webkit-transition: opacity .50s ease-in-out;
+  -o-transition: opacity .50s ease-in-out;
+}
+
+.econa-loading .econa-preview-image {
+  opacity: 0;
+}
+
+.econa-toolbar {
+  margin-top: 12px;
+}
+
+.econa-cropper-image {
+  display: block;
+  max-width: 100%;
+}
+
+.econa-cropper-buttons {
+  text-align: center;
+}
+
+.econa-cropper-buttons>div {
+  display: inline-block;
+  margin: 8px;
+}
+
+.econa-loading {
+  background: url('../images/gear.gif') 10px 10px no-repeat;
+  min-height: 50px;
+}
+
+.econa-container.j3 div.econa-modal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.econa-container.j3 div.econa-modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.econa-container.j3 div.econa-modal .modal-body {
+  flex: 1 1 auto;
+}
+
+.econa-modal .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.econa-modal .modal-footer {
+  display: block;
+}
+
+.econa-field-container .field-media-wrapper .input-append, .econa-field-container .field-media-wrapper .input-group, .econa-article-images-container .field-media-wrapper .input-append, .econa-article-images-container .field-media-wrapper .input-group {
+  display: none;
+}
+
+.form-horizontal .econa-field-container .controls {
+  margin-left: 0;
+}
+
+.econa-aspect-ratio-field {
+  max-width: 120px;
+  display: inline-block;
+}

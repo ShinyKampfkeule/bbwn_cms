@@ -1,0 +1,34 @@
+.event {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+
+    &__text-container {
+        background-color: var(--accent-black-trans);
+        height: 10%;
+    }
+
+    &__heading {
+        width: 100%;
+        padding-left: .2em;
+        color: var(--main-white);
+    }
+
+    &__title {
+        width: 100%;
+        padding-left: .2em;
+        color: var(--main-white);
+        margin-top: .2em;
+    }
+
+    &__picture {
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

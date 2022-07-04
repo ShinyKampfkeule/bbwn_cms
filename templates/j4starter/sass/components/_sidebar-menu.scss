@@ -1,0 +1,33 @@
+.sidebar-menu {
+    background-color: var(--main-orange);
+    border-right: 2px solid var(--accent-orange-1);
+    position: relative;
+}
+
+.mod-menu {
+    display: block;
+    grid-column: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    :hover {
+        background-color: var(--accent-orange-2)
+    }
+
+    .active {
+        background-color: var(--accent-orange-2)
+    }
+
+    .nav-item {
+        margin-top: .5em;
+        height: 1.5em;
+        font-size: 1rem;
+    }
+
+    a {
+        color: var(--main-white);
+        text-decoration: none;
+        padding-left: 1em;
+        width: 100%;
+    }
+}

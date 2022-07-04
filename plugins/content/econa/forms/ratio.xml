@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<field name="ratio" type="text" label="PLG_CONTENT_ECONA_ASPECT_RATIO" hint="PLG_CONTENT_ECONA_ASPECT_RATIO_HINT"/>
+</form>

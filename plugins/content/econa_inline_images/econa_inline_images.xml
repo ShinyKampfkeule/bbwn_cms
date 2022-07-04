@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension group="content" method="upgrade" type="plugin" version="3.4">
+	<name>plg_content_econa_inline_images</name>
+	<author>Lefteris Kavadas</author>
+	<creationDate>May 2022</creationDate>
+	<copyright>Lefteris Kavadas / firecoders.com</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<authorEmail>info@firecoders.com</authorEmail>
+	<authorUrl>www.firecoders.com</authorUrl>
+	<version>1.8.5</version>
+	<description>PLG_CONTENT_ECONA_INLINE_IMAGES_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="econa_inline_images">econa_inline_images.php</filename>
+		<folder>forms</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field type="note" description="PLG_CONTENT_ECONA_INLINE_IMAGES_DESC" />
+				<field class="chzn-color-state" default="simple" label="PLG_CONTENT_ECONA_INLINE_IMAGES_RESIZE_CONTENT_IMAGES" name="rezize_content_images" type="list">
+					<option value="0">JDISABLED</option>
+					<option value="simple">PLG_CONTENT_ECONA_INLINE_IMAGES_SIMPLE_METHOD</option>
+					<option value="responsive">PLG_CONTENT_ECONA_INLINE_IMAGES_RESPONSIVE_IMAGES_METHOD</option>
+				</field>
+				<field class="btn-group btn-group-yesno" default="1" label="PLG_CONTENT_ECONA_INLINE_IMAGES_CONVERT_TO_JPEG" description="PLG_CONTENT_ECONA_INLINE_IMAGES_CONVERT_TO_JPEG_DESC" name="content_images_jpeg" type="radio">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field type="spacer" hr="true"/>
+				<field type="spacer" label="PLG_CONTENT_ECONA_INLINE_IMAGES_SIMPLE_METHOD_OPTIONS" class="text-info"/>
+				<field default="1000" label="PLG_CONTENT_ECONA_INLINE_IMAGES_MAX_WIDTH" max="2000" min="0" name="content_images_max_width" step="1" type="number" required="true"/>
+				<field default="90" label="PLG_CONTENT_ECONA_INLINE_IMAGES_QUALITY" max="100" min="1" name="content_images_quality" step="1" type="number" required="true"/>
+				<field type="spacer" hr="true"/>
+				<field type="spacer" label="PLG_CONTENT_ECONA_INLINE_IMAGES_RESPONSIVE_IMAGES_METHOD_OPTIONS" class="text-info"/>
+				<field
+					name="content_images_sizes"
+					layout="joomla.form.field.subform.repeatable-table"
+					type="subform"
+					formsource="plugins/content/econa_inline_images/forms/size.xml"
+					multiple="true"
+					label="PLG_CONTENT_ECONA_INLINE_IMAGES_IMAGE_SIZES"
+					default='{"__field10": {"label": "Small", "identifier": "S", "width": "300", "quality": "65"},  "__field11": {   "label": "Medium",   "identifier": "M",   "width": "600",   "quality": "80"  }, "__field12": {"label": "Large", "identifier": "L", "width": "900", "quality": "95"}}'/>
+				<field
+					label="PLG_CONTENT_ECONA_INLINE_IMAGES_DEFAULT_SIZES_ATTRIBUTE"
+					description="PLG_CONTENT_ECONA_INLINE_IMAGES_DEFAULT_SIZES_ATTRIBUTE_DESC"
+					name="content_images_default_sizes_attribute"
+					type="text"
+					hint="PLG_CONTENT_ECONA_INLINE_IMAGES_DEFAULT_SIZES_ATTRIBUTE_EXAMPLE"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

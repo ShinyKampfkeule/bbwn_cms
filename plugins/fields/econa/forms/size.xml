@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<field default="" name="label" label="PLG_FIELDS_ECONA_SIZE" type="text"/>
+	<field default="" name="identifier" label="PLG_FIELDS_ECONA_IDENTIFIER" type="text" filter="cmd" size="3" maxLength="3"/>
+	<field default="300" name="width" label="PLG_FIELDS_ECONA_WIDTH" max="2000" min="0" step="1" type="number" size="3"/>
+	<field default="100" name="quality" label="PLG_FIELDS_ECONA_QUALITY" max="100" min="5" type="number" size="3"/>
+</form>

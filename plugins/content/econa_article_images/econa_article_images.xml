@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension group="content" method="upgrade" type="plugin" version="3.4">
+	<name>plg_content_econa_article_images</name>
+	<author>Lefteris Kavadas</author>
+	<creationDate>May 2022</creationDate>
+	<copyright>Lefteris Kavadas / firecoders.com</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<authorEmail>info@firecoders.com</authorEmail>
+	<authorUrl>www.firecoders.com</authorUrl>
+	<version>1.8.5</version>
+	<description>PLG_CONTENT_ECONA_ARTICLE_IMAGES_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="econa_article_images">econa_article_images.php</filename>
+		<folder>fields</folder>
+		<folder>forms</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field class="btn-group btn-group-yesno" default="1" label="PLG_CONTENT_ECONA_ARTICLE_IMAGES_AUTO_EDIT_WHEN_CHANGED_LABEL" description="PLG_CONTENT_ECONA_ARTICLE_IMAGES_AUTO_EDIT_WHEN_CHANGED_DESC" name="auto_edit" type="radio">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="aspect_ratios"
+					layout="joomla.form.field.subform.repeatable-table"
+					type="subform"
+					formsource="plugins/content/econa_article_images/forms/ratio.xml"
+					multiple="true"
+					label="PLG_CONTENT_ECONA_ARTICLE_IMAGES_ASPECT_RATIOS_LABEL"
+					description="PLG_CONTENT_ECONA_ARTICLE_IMAGES_ASPECT_RATIOS_DESC"/>
+				<field class="btn-group btn-group-yesno" default="1" label="PLG_CONTENT_ECONA_ARTICLE_IMAGES_FREE_ASPECT_RATIO_LABEL" name="free_aspect_ratio" type="radio">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field class="btn-group btn-group-yesno" default="1" label="PLG_CONTENT_ECONA_ARTICLE_IMAGES_ENABLE_MEDIA_LABEL" description="PLG_CONTENT_ECONA_ARTICLE_IMAGES_ENABLE_MEDIA_DESC" name="media" type="radio">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field class="btn-group btn-group-yesno" default="1" label="PLG_CONTENT_ECONA_ARTICLE_IMAGES_RESIZE_IMAGES" name="resize" type="radio">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field showon="resize:1" class="btn-group btn-group-yesno" default="1" label="PLG_CONTENT_ECONA_ARTICLE_IMAGES_CONVERT_TO_JPEG" description="PLG_CONTENT_ECONA_ARTICLE_IMAGES_CONVERT_TO_JPEG_DESC" name="jpeg" type="radio">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field showon="resize:1" default="400" label="PLG_CONTENT_ECONA_ARTICLE_IMAGES_INTRO_IMAGE_WIDTH" max="2000" min="0" name="intro_image_width" step="1" required="true" type="number"/>
+				<field showon="resize:1" default="75" label="PLG_CONTENT_ECONA_ARTICLE_IMAGES_INTRO_IMAGE_QUALITY" max="100" min="1" name="intro_image_quality" step="1" required="true" type="number"/>
+				<field showon="resize:1" default="800" label="PLG_CONTENT_ECONA_ARTICLE_IMAGES_FULL_IMAGE_WIDTH" max="2000" min="0" name="full_image_width" step="1" required="true" type="number"/>
+				<field showon="resize:1" default="90" label="PLG_CONTENT_ECONA_ARTICLE_IMAGES_FULL_IMAGE_QUALITY" max="100" min="1" name="full_image_quality" step="1" required="true" type="number"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

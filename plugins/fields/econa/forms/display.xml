@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<field name="title" type="econafieldsspacer" class="text-info"/>
+	<field name="view" type="hidden"/>
+	<field label="PLG_FIELDS_ECONA_IMAGE_LABEL" description="PLG_FIELDS_ECONA_IMAGE_LABEL_RESPONSIVE_DESC" name="image" type="econafieldsimagesize" multiple="true" size="10"/>
+	<field label="PLG_FIELDS_ECONA_SIZES_ATTRIBUTE" description="PLG_FIELDS_ECONA_SIZES_ATTRIBUTE_DESC" name="image_sizes_attribute" type="text" hint="PLG_FIELDS_ECONA_CONTENT_IMAGES_DEFAULT_SIZES_ATTRIBUTE_EXAMPLE"/>
+	<field class="btn-group btn-group-yesno" default="1" label="PLG_FIELDS_ECONA_CAPTION_LABEL" name="caption" type="radio">
+		<option value="0">PLG_FIELDS_ECONA_HIDE</option>
+		<option value="1">PLG_FIELDS_ECONA_SHOW</option>
+	</field>
+	<field class="btn-group btn-group-yesno" default="1" label="PLG_FIELDS_ECONA_CREDITS_LABEL" name="credits" type="radio">
+		<option value="0">PLG_FIELDS_ECONA_HIDE</option>
+		<option value="1">PLG_FIELDS_ECONA_SHOW</option>
+	</field>
+	<field label="PLG_FIELDS_ECONA_LINK" description="PLG_FIELDS_ECONA_LINK_DESC" name="link" type="radio" class="btn-group btn-group-yesno" default="0">
+		<option value="0">JNO</option>
+		<option value="1">JYES</option>
+	</field>
+	<field showon="link:0" label="PLG_FIELDS_ECONA_MODAL" description="PLG_FIELDS_ECONA_MODAL_DESC" name="modal" type="econafieldsimagesize" class="chzn-color-state">
+		<option value="0">PLG_CONTENT_DISABLED</option>
+	</field>
+</form>

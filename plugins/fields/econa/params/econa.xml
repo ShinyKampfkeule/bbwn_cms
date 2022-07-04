@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="fieldparams" addfieldpath="plugins/fields/econa/fields">
+		<fieldset name="fieldparams">
+			<field
+				name="sizes"
+				layout="joomla.form.field.subform.repeatable-table"
+				type="subform"
+				formsource="plugins/fields/econa/forms/size.xml"
+				multiple="true"
+				label="PLG_FIELDS_ECONA_IMAGE_SIZES"
+				description="PLG_FIELDS_ECONA_ASPECT_RATIOS_DESC"
+				default='{"__field10": {"label": "Small", "identifier": "S", "width": "300", "quality": "65"},  "__field11": {   "label": "Medium",   "identifier": "M",   "width": "600",   "quality": "80"  }, "__field12": {"label": "Large", "identifier": "L", "width": "900", "quality": "95"}}'/>
+			<field class="btn-group btn-group-yesno" default="1" label="PLG_FIELDS_ECONA_CONVERT_TO_JPEG" description="PLG_FIELDS_ECONA_CONVERT_TO_JPEG_DESC" name="jpeg" type="radio">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field class="btn-group btn-group-yesno" default="1" label="PLG_FIELDS_ECONA_GENERATE_WEBP" description="PLG_FIELDS_ECONA_GENERATE_WEBP_DESC" name="webp" type="radio">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field class="btn-group btn-group-yesno" default="1" label="PLG_FIELDS_ECONA_ENABLE_MEDIA_LABEL" description="PLG_FIELDS_ECONA_ENABLE_MEDIA_DESC" name="media" type="radio">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field class="btn-group btn-group-yesno" default="1" label="PLG_FIELDS_ECONA_CSS_LABEL" name="css" type="radio">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field class="btn-group btn-group-yesno" default="1" label="PLG_FIELDS_ECONA_AUTO_EDIT_WHEN_CHANGED_LABEL" description="PLG_FIELDS_ECONA_AUTO_EDIT_WHEN_CHANGED_DESC" name="auto_edit" type="radio">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field
+				name="aspect_ratios"
+				layout="joomla.form.field.subform.repeatable-table"
+				type="subform"
+				formsource="plugins/fields/econa/forms/ratio.xml"
+				multiple="true"
+				label="PLG_FIELDS_ECONA_ASPECT_RATIOS_LABEL"
+				description="PLG_FIELDS_ECONA_ASPECT_RATIOS_DESC"/>
+			<field class="btn-group btn-group-yesno" default="1" label="PLG_FIELDS_ECONA_FREE_ASPECT_RATIO_LABEL" name="free_aspect_ratio" type="radio">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field class="btn-group btn-group-yesno" default="0" label="PLG_FIELDS_ECONA_OG_IMAGE_LABEL" description="PLG_FIELDS_ECONA_OG_IMAGE_DESC" name="og_image" type="radio">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+	</fields>
+	<fieldset name="econa_display_options" label="PLG_FIELDS_ECONA_DISPLAY_OPTIONS">
+		<fields name="fieldparams" addfieldpath="plugins/fields/econa/fields">
+			<field name="display" labelclass="hidden" type="subform" layout="joomla.form.field.subform.repeatable" formsource="/plugins/fields/econa/forms/display.xml" buttons="none" multiple="true" label="PLG_FIELDS_ECONA_CONFIGURE"/>
+		</fields>
+	</fieldset>
+</form>

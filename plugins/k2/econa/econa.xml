@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension group="k2" method="upgrade" type="plugin" version="3.4">
+	<name>plg_k2_econa</name>
+	<author>Lefteris Kavadas</author>
+	<creationDate>May 2022</creationDate>
+	<copyright>Lefteris Kavadas / firecoders.com</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<authorEmail>info@firecoders.com</authorEmail>
+	<authorUrl>www.firecoders.com</authorUrl>
+	<version>1.8.5</version>
+	<description>PLG_K2_ECONA_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="econa">econa.php</filename>
+		<folder>css</folder>
+		<folder>fields</folder>
+		<folder>forms</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>tables</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="plugins/content/econa/fields">
+			<fieldset name="basic">
+				<field class="btn-group btn-group-yesno" default="1" label="PLG_K2_ECONA_KEEP_NATIVE_IMAGES" description="PLG_K2_ECONA_KEEP_NATIVE_IMAGES_DESC" name="keep_native_images" type="radio">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field class="btn-group btn-group-yesno" default="1" label="PLG_K2_ECONA_AUTO_EDIT_WHEN_CHANGED_LABEL" description="PLG_K2_ECONA_AUTO_EDIT_WHEN_CHANGED_DESC" name="auto_edit" type="radio">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="aspect_ratios"
+					layout="joomla.form.field.subform.repeatable-table"
+					type="subform"
+					formsource="plugins/k2/econa/forms/ratio.xml"
+					multiple="true"
+					label="PLG_K2_ECONA_ASPECT_RATIOS_LABEL"
+					description="PLG_K2_ECONA_ASPECT_RATIOS_DESC"/>
+					<field class="btn-group btn-group-yesno" default="1" label="PLG_K2_ECONA_FREE_ASPECT_RATIO_LABEL" name="free_aspect_ratio" type="radio">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+			</fieldset>
+		</fields>
+	</config>
+	<fields addfieldpath="/plugins/k2/econa/fields/" group="item-image">
+		<field label="" name="filename" type="text" hint="PLG_K2_ECONA_FILENAME_DESC"/>
+		<field label="PLG_K2_ECONA_PREVIEW_LABEL" name="preview" type="econaK2Image"/>
+		<field name="key" type="hidden"/>
+		<field name="upload" type="hidden"/>
+		<field name="key" type="econaK2Key"/>
+		<field name="delete" type="hidden"/>
+	</fields>
+</extension>

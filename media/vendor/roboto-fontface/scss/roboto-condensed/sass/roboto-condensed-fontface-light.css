@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Roboto-Condensed";
+  src: url("../../../fonts/roboto-condensed/Roboto-Condensed-Light.woff2") format("woff2"), url("../../../fonts/roboto-condensed/Roboto-Condensed-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Condensed-Light";
+  src: url("../../../fonts/roboto-condensed/Roboto-Condensed-Light.woff2") format("woff2"), url("../../../fonts/roboto-condensed/Roboto-Condensed-Light.woff") format("woff");
+}/*# sourceMappingURL=roboto-condensed-fontface-light.css.map */

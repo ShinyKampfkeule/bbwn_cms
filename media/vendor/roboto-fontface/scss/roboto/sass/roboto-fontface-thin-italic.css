@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../fonts/roboto/Roboto-ThinItalic.woff2") format("woff2"), url("../../../fonts/roboto/Roboto-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto-ThinItalic";
+  src: url("../../../fonts/roboto/Roboto-ThinItalic.woff2") format("woff2"), url("../../../fonts/roboto/Roboto-ThinItalic.woff") format("woff");
+}/*# sourceMappingURL=roboto-fontface-thin-italic.css.map */

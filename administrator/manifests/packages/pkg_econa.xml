@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension method="upgrade" type="package" version="3.4">
+	<name>Econa</name>
+	<author>Lefteris Kavadas</author>
+	<authorEmail>info@firecoders.com</authorEmail>
+	<authorUrl>www.firecoders.com</authorUrl>
+	<creationDate>May 2022</creationDate>
+	<copyright>Lefteris Kavadas / firecoders.com</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<packagename>econa</packagename>
+	<version>1.8.5</version>
+	<url>https://www.firecoders.com</url>
+	<packager>Lefteris Kavadas</packager>
+	<packagerurl>https://www.firecoders.com</packagerurl>
+	<description></description>
+	<update>https://www.firecoders.com/econa/update</update>
+	<scriptfile>script.econa.php</scriptfile>
+	<files folder="extensions">
+		<file group="content" id="econa" type="plugin">plg_content_econa.zip</file>
+		<file group="content" id="econa_article_images" type="plugin">plg_content_econa_article_images.zip</file>
+		<file group="content" id="econa_inline_images" type="plugin">plg_content_econa_inline_images.zip</file>
+		<file group="installer" id="econa" type="plugin">plg_installer_econa.zip</file>
+		<file group="k2" id="econa" type="plugin">plg_k2_econa.zip</file>
+		<file group="fields" id="econa" type="plugin">plg_fields_econa.zip</file>
+		<file group="system" id="econa" type="plugin">plg_system_econa.zip</file>
+	</files>
+	<updateservers>
+		<server name="Econa" priority="1" type="extension">https://www.firecoders.com/updates/econa</server>
+	</updateservers>
+</extension>

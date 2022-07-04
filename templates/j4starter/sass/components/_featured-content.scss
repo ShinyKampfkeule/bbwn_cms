@@ -1,0 +1,32 @@
+.featured-content {
+
+  &__content {
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__header {
+    width: 90%;
+    height: 1.8em;
+    position: fixed;
+    background-color: var(--main-white);
+    z-index: 5;
+    padding-top: .2em;
+    padding-left: .4em;
+  }
+
+  &__news-grid {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    display: grid;
+    grid-template-columns: repeat( 3, calc( (100% - 2em) / 3 ) );
+    grid-template-rows: repeat(2, calc( (100% - 2em) / 2 ));
+    column-gap: 1em;
+    row-gap: 1em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1em;
+  }
+}

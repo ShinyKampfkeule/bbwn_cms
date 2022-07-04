@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="econa">
+		<fieldset addfieldpath="/plugins/content/econa/fields" label="PLG_CONTENT_ECONA_IMAGE_LABEL" name="econa">
+			<field description="PLG_CONTENT_ECONA_UPLOAD_DESC" label="PLG_CONTENT_ECONA_UPLOAD_LABEL" name="file" type="file"/>
+			<field description="PLG_CONTENT_ECONA_PATH_DESC" label="PLG_CONTENT_ECONA_PATH_LABEL" name="path" preview="false" type="media"/>
+			<field description="PLG_CONTENT_ECONA_CAPTION_DESC" label="PLG_CONTENT_ECONA_CAPTION_LABEL" name="caption" type="text"/>
+			<field description="PLG_CONTENT_ECONA_CREDITS_DESC" label="PLG_CONTENT_ECONA_CREDITS_LABEL" name="credits" type="text"/>
+			<field description="PLG_CONTENT_ECONA_ALT_DESC" label="PLG_CONTENT_ECONA_ALT_LABEL" name="alt" type="text"/>
+			<field description="PLG_CONTENT_ECONA_FILENAME_DESC" label="PLG_CONTENT_ECONA_FILENAME_LABEL" name="filename" type="text"/>
+			<field label="PLG_CONTENT_ECONA_PREVIEW_LABEL" name="preview" type="econaContentImage"/>
+			<field name="key" type="hidden"/>
+			<field name="upload" type="hidden"/>
+			<field name="key" type="econaContentKey"/>
+			<field name="delete" type="hidden"/>
+		</fieldset>
+	</fields>
+</form>

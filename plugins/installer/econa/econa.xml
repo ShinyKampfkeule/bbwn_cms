@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension group="installer" method="upgrade" type="plugin" version="3.4">
+	<name>plg_installer_econa</name>
+	<author>Lefteris Kavadas</author>
+	<creationDate>May 2022</creationDate>
+	<copyright>Lefteris Kavadas / firecoders.com</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<authorEmail>info@firecoders.com</authorEmail>
+	<authorUrl>www.firecoders.com</authorUrl>
+	<version>1.8.5</version>
+	<description>PLG_INSTALLER_ECONA_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="econa">econa.php</filename>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field description="PLG_INSTALLER_ECONA_DOWNLOAD_ID_DESC" label="PLG_INSTALLER_ECONA_DOWNLOAD_ID_LABEL" name="downloadId" type="text"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,65 @@
+/**
+ * @author      Lefteris Kavadas
+ * @copyright   Copyright (c) 2016 - 2022 Lefteris Kavadas / firecoders.com
+ * @license     GNU General Public License version 3 or later
+ */
+
+@font-face {
+  font-family: 'econa';
+  src: url('fonts/econa.eot?8e8h9v');
+  src: url('fonts/econa.eot?8e8h9v#iefix') format('embedded-opentype'), url('fonts/econa.ttf?8e8h9v') format('truetype'), url('fonts/econa.woff?8e8h9v') format('woff'), url('fonts/econa.svg?8e8h9v#econa') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="econa-icon-"], [class*=" econa-icon-"] {
+  font-family: 'econa';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.econa-icon-uniF07D:before {
+  content: "\f07d";
+}
+.econa-icon-uniF07E:before {
+  content: "\f07e";
+}
+#econaCropperButtons {
+  display: none;
+  text-align: center;
+}
+#econaCropperButtons > div {
+  margin: 8px;
+}
+#econaImage .econaImage, .cropper-container {
+  border: 4px solid #DDD;
+  margin: 10px 0;
+  padding: 0;
+  display: block;
+}
+#jform_econa_path {
+  display: none;
+}
+#attrib-econa .control-group:nth-child(7) .controls {
+  margin-left: 0;
+}
+.econaLoading {
+  background: url(gear.gif) 10px 10px no-repeat;
+  min-height: 50px;
+}
+#econaImage, #econaToolbar, #econaCropperButtons {
+  transition: opacity .50s ease-in-out;
+  -moz-transition: opacity .50s ease-in-out;
+  -webkit-transition: opacity .50s ease-in-out;
+  -o-transition: opacity .50s ease-in-out;
+}
+.econaLoading #econaImage, .econaLoading #econaToolbar, .econaLoading #econaCropperButtons {
+  opacity: 0;
+}
+#econaContainer {
+  max-width: 1000px;
+}

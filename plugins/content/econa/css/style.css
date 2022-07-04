@@ -1,0 +1,36 @@
+/**
+ * @author      Lefteris Kavadas
+ * @copyright   Copyright (c) 2016 - 2022 Lefteris Kavadas / firecoders.com
+ * @license     GNU General Public License version 3 or later
+ */
+
+.econaArticleImageBlock, .econaListImageBlock {
+  margin-bottom: 16px;
+}
+.econaArticleImageBlock:after, .econaListImageBlock:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.econaImage {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.econaImage img {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  padding: 8px;
+}
+.econaImageCaption {
+  display: block;
+  float: left;
+  font-size: 11px;
+}
+.econaImageCredits {
+  display: block;
+  float: right;
+  font-style: italic;
+  font-size: 11px;
+}
