@@ -31,6 +31,8 @@ $news_2 = FALSE;
 <?php endforeach; ?>
 
 <section class="featured-content__content">
+	<h1 class="featured-content__news">Neuigkeiten</h1>
+	<h1 class="featured-content__upc-events">Nächste Veranstaltung</h1>
 	<section class="featured-content__news-grid">
 		<section class="grid-element-1-1_2"> 
 			<div class="carousel" aria-label="Gallery">
@@ -58,7 +60,7 @@ $news_2 = FALSE;
 									<img class="carousel__image" src="<?php echo $bild ?>" />
 								</picture>
 								<section class="carousel__popup">
-									<p>
+									<p class="carousel__text">
 										<?php echo substr( $item -> jcfields[3] -> rawvalue, 0, 250 );  ?>...
 									</p>
 								</section>
@@ -117,7 +119,7 @@ $news_2 = FALSE;
 				$name = json_decode( $news_1 -> jcfields[4] -> rawvalue ) -> filename;
 				$bild6 = "/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
 			?>
-			<h2 class="news-container__heading grid-element-1-1"><?php echo $news_1 -> title ?></h2>
+			<h2 class="news-container__heading grid-element-1-1"><?php echo substr( $news_1 -> title, 0, 50 ); ?></h2>
 			<?php if ($videoId !== "") : ?>
 				<iframe class="news-container__video grid-element-1-1" src="<?php echo $videoLink ?>"></iframe>
 			<?php else : ?>
@@ -126,7 +128,7 @@ $news_2 = FALSE;
             </picture>
 			<?php endif; ?>
 			<section class="news-container__popup grid-element-1-1">
-				<p>
+				<p class="news-container__text">
 				<?php echo substr( $news_1 -> jcfields[3] -> rawvalue, 0, 200 );  ?>...
 				</p>
 			</section>
@@ -137,12 +139,12 @@ $news_2 = FALSE;
 				$name = json_decode( $news_2 -> jcfields[4] -> rawvalue ) -> filename;
 				$bild7 = "/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
 			?>
-			<h2 class="news-container__heading grid-element-1-1"><?php echo $news_2 -> title ?></h2>
+			<h2 class="news-container__heading grid-element-1-1"><?php echo substr( $news_2 -> title, 0, 50 ); ?></h2>
 			<picture class="news-container__picture grid-element-1-1">
                 <img class="news-container__image"  src="<?php echo $bild7 ?>" />
             </picture>
 			<section class="news-container__popup grid-element-1-1">
-				<p>
+				<p class="news-container__text">
 					<?php echo substr( $news_2 -> jcfields[3] -> rawvalue, 0, 200 );  ?>...
 				</p>
 			</section>

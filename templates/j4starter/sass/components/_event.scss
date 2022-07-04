@@ -12,6 +12,7 @@
         width: 100%;
         padding-left: .2em;
         color: var(--main-white);
+        font-size: var(--event-heading-fs);
     }
 
     &__title {
@@ -19,6 +20,7 @@
         padding-left: .2em;
         color: var(--main-white);
         margin-top: .2em;
+        font-size: var(--event-heading-fs);
     }
 
     &__picture {
