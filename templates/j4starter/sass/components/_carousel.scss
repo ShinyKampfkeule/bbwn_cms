@@ -42,7 +42,23 @@
         scroll-snap-align: center;
     }
 }
-  
+
+@keyframes carousel-popup-animate {
+    0% {
+        width: 0;
+    }
+
+    95% {
+        width: 20%;
+    }
+
+    100% {
+        .carousel__popup p {
+            opacity: 1;
+        }
+    }
+}
+
 ol, li {
     list-style: none;
     margin: 0;
@@ -220,6 +236,7 @@ ol, li {
         background-color: var(--accent-black-trans);
         font-size: 1rem;
         color: var(--main-white);
+        animation: carousel-popup-animate 1s ease 0s 1 normal forwards;
 
         p {
             position: relative;
@@ -228,6 +245,7 @@ ol, li {
             margin-top: .5em;
             width: 85%;
             padding-left: 1em;
+            opacity: 0;
         }
     }
 
