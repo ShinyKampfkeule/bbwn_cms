@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 $news_arr = [];
 $news_1 = FALSE;
 $news_2 = FALSE;
-$path = dirname(__FILE__, 2);
+// $path = dirname(__FILE__, 2);
 
 ?>
 <?php foreach ($this->lead_items as &$item) : ?>
@@ -51,9 +51,9 @@ $path = dirname(__FILE__, 2);
 								$name = json_decode( $item -> jcfields[4] -> rawvalue ) -> filename;
 							?>
 							<?php if ($name !== "") : ?>
-								<?php $bild = "{$path}/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg"; ?>
+								<?php $bild = "../images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg"; ?>
 							<?php else : ?>
-								<?php $bild = "{$path}/images/placeholder/gelände.png"; ?>
+								<?php $bild = "../images/placeholder/gelände.png"; ?>
 							<?php endif; ?>
 							<div class="carousel__content">
 								<h2 class="carousel__heading"><?php echo( $item -> title ) ?></h2>
@@ -106,7 +106,7 @@ $path = dirname(__FILE__, 2);
 			<?php 
 				$id = json_decode( $event -> jcfields[11] -> rawvalue ) -> itemId;
 				$name = json_decode( $event -> jcfields[11] -> rawvalue ) -> filename;
-				$bild5 = "{$path}/images/econa/fields/11/com_content_article/{$id}/{$name}_L.jpg";
+				$bild5 = "../images/econa/fields/11/com_content_article/{$id}/{$name}_L.jpg";
 			?>
 			<picture class="event__picture grid-element-1-1">
                 <img class="layout2__image"  src="<?php echo $bild5 ?>" />
@@ -118,7 +118,7 @@ $path = dirname(__FILE__, 2);
 				$videoLink = "https://www.youtube.com/embed/{$videoId}?autoplay=1&mute=1&loop=1&controls=0";
 				$id = json_decode( $news_1 -> jcfields[4] -> rawvalue ) -> itemId;
 				$name = json_decode( $news_1 -> jcfields[4] -> rawvalue ) -> filename;
-				$bild6 = "{$path}/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
+				$bild6 = "../images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
 			?>
 			<h2 class="news-container__heading grid-element-1-1"><?php echo substr( $news_1 -> title, 0, 50 ); ?></h2>
 			<?php if ($videoId !== "") : ?>
@@ -138,7 +138,7 @@ $path = dirname(__FILE__, 2);
 			<?php 
 				$id = json_decode($news_2 -> jcfields[4] -> rawvalue ) -> itemId;
 				$name = json_decode( $news_2 -> jcfields[4] -> rawvalue ) -> filename;
-				$bild7 = "{$path}/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
+				$bild7 = "../images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
 			?>
 			<h2 class="news-container__heading grid-element-1-1"><?php echo substr( $news_2 -> title, 0, 50 ); ?></h2>
 			<picture class="news-container__picture grid-element-1-1">
@@ -155,7 +155,7 @@ $path = dirname(__FILE__, 2);
 		<?php 
 			$id = json_decode($about -> jcfields[4] -> rawvalue ) -> itemId;
 			$name = json_decode( $about -> jcfields[4] -> rawvalue ) -> filename;
-			$bild8 = "{$path}/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
+			$bild8 = "../images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
 		?>
 		<h2><?php echo $about -> title ?></h2>
 		<picture class="grid-element-1-1">
