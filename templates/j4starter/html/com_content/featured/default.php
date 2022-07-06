@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 $news_arr = [];
 $news_1 = FALSE;
 $news_2 = FALSE;
-$path = __DIR__;
+$path = dirname(__FILE__, 2);
 
 ?>
 <?php foreach ($this->lead_items as &$item) : ?>
