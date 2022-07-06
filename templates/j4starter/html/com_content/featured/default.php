@@ -12,6 +12,7 @@ defined('_JEXEC') or die;
 $news_arr = [];
 $news_1 = FALSE;
 $news_2 = FALSE;
+$path = __DIR__;
 
 ?>
 <?php foreach ($this->lead_items as &$item) : ?>
@@ -50,9 +51,9 @@ $news_2 = FALSE;
 								$name = json_decode( $item -> jcfields[4] -> rawvalue ) -> filename;
 							?>
 							<?php if ($name !== "") : ?>
-								<?php $bild = "/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg"; ?>
+								<?php $bild = "{$path}/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg"; ?>
 							<?php else : ?>
-								<?php $bild = "/images/placeholder/gelände.png"; ?>
+								<?php $bild = "{$path}/images/placeholder/gelände.png"; ?>
 							<?php endif; ?>
 							<div class="carousel__content">
 								<h2 class="carousel__heading"><?php echo( $item -> title ) ?></h2>
@@ -105,7 +106,7 @@ $news_2 = FALSE;
 			<?php 
 				$id = json_decode( $event -> jcfields[11] -> rawvalue ) -> itemId;
 				$name = json_decode( $event -> jcfields[11] -> rawvalue ) -> filename;
-				$bild5 = "/images/econa/fields/11/com_content_article/{$id}/{$name}_L.jpg";
+				$bild5 = "{$path}/images/econa/fields/11/com_content_article/{$id}/{$name}_L.jpg";
 			?>
 			<picture class="event__picture grid-element-1-1">
                 <img class="layout2__image"  src="<?php echo $bild5 ?>" />
@@ -117,7 +118,7 @@ $news_2 = FALSE;
 				$videoLink = "https://www.youtube.com/embed/{$videoId}?autoplay=1&mute=1&loop=1&controls=0";
 				$id = json_decode( $news_1 -> jcfields[4] -> rawvalue ) -> itemId;
 				$name = json_decode( $news_1 -> jcfields[4] -> rawvalue ) -> filename;
-				$bild6 = "/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
+				$bild6 = "{$path}/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
 			?>
 			<h2 class="news-container__heading grid-element-1-1"><?php echo substr( $news_1 -> title, 0, 50 ); ?></h2>
 			<?php if ($videoId !== "") : ?>
@@ -137,7 +138,7 @@ $news_2 = FALSE;
 			<?php 
 				$id = json_decode($news_2 -> jcfields[4] -> rawvalue ) -> itemId;
 				$name = json_decode( $news_2 -> jcfields[4] -> rawvalue ) -> filename;
-				$bild7 = "/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
+				$bild7 = "{$path}/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
 			?>
 			<h2 class="news-container__heading grid-element-1-1"><?php echo substr( $news_2 -> title, 0, 50 ); ?></h2>
 			<picture class="news-container__picture grid-element-1-1">
@@ -154,7 +155,7 @@ $news_2 = FALSE;
 		<?php 
 			$id = json_decode($about -> jcfields[4] -> rawvalue ) -> itemId;
 			$name = json_decode( $about -> jcfields[4] -> rawvalue ) -> filename;
-			$bild8 = "/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
+			$bild8 = "{$path}/images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
 		?>
 		<h2><?php echo $about -> title ?></h2>
 		<picture class="grid-element-1-1">
@@ -165,16 +166,3 @@ $news_2 = FALSE;
 		</p>
 	</section>
 </section>
-
-
-
-
-
-	<!-- <div class="blog-item"
-		itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-			<?php
-			$this->item = & $item;
-			echo $this->loadTemplate('item');
-			?>
-	</div> -->
-
