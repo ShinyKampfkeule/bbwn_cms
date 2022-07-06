@@ -1,5 +1,17 @@
 .featured-content {
 
+  &__news {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  &__upc-events {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+
   &__content {
     width: 80%;
     position: relative;

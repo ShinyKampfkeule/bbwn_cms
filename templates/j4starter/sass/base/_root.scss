@@ -6,4 +6,17 @@
     --accent-orange-2: rgb(255, 98, 8);
     --accent-grey-1: rgb(202, 202, 202);
     --accent-black-trans: rgba(0, 0, 0, .5);
+
+    --font-size-50: .5em;
+    --font-size-80: .8em;
+    --font-size-100: 1em;
+    --font-size-120: 1.2em;
+    --font-size-130: 1.3em;
+    --font-size-150: 1.5em;
+
+    --top-left-logo: 15em;
+    --news-container-heading-fs: var(--font-size-150);
+    --news-container-text-fs: var(--font-size-150);
+    --carousel-heading-fs: var(--font-size-150);
+    --event-heading-fs: var(--font-size-150);
 }

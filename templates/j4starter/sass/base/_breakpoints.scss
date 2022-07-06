@@ -1,0 +1,40 @@
+@media only screen and (max-width: 599px) {
+    :root {
+        --top-left-logo: 2em;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    :root {
+        --top-left-logo: 4em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :root {
+        --top-left-logo: 6em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    :root {
+        --top-left-logo: 8em;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    :root {
+        --top-left-logo: 10em;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    :root {
+        --top-left-logo: 10em;
+        --news-container-heading-fs: var(--font-size-100);
+        --news-container-text-fs: var(--font-size-80);
+        --carousel-heading-fs: var(--font-size-100);
+        --carousel-text-fs: var(--font-size-80);
+        --event-heading-fs: var(--font-size-130);
+    }
+}

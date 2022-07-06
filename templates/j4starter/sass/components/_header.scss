@@ -2,10 +2,10 @@
     background-color: var(--main-blue);
     height: 100%;
 
-    svg {
+    &__svg {
         position: relative;
         top: 0.5rem;
-        width: 15rem;
+        width: var(--top-left-logo);
         left: 1em;
     }
 }
