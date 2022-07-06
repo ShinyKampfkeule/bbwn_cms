@@ -13,10 +13,10 @@ class JConfig {
 	public $debug_lang = false;
 	public $debug_lang_const = true;
 	public $dbtype = 'mysqli';
-	public $host = 'db1258.mydbserver.com';
-	public $user = 'p616760d1';
+	public $host = 'db1270.mydbserver.com';
+	public $user = 'p620727d1';
 	public $password = 'm5uNkub$i4q#bn';
-	public $db = 'usr_p616760_1';
+	public $db = 'usr_p620727_1';
 	public $dbprefix = 'e5oha_';
 	public $dbencryption = 0;
 	public $dbsslverifyservercert = false;

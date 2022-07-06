@@ -4,20 +4,21 @@
     grid-template-rows: 100%;
 
     &__text-container {
-        background-color: var(--accent-black-trans);
+        background-color: var(--accent-black-trans-750);
         height: 10%;
     }
 
     &__heading {
         width: 100%;
-        padding-left: .2em;
+        padding-left: .4em;
+        padding-top: .2em;
         color: var(--main-white);
         font-size: var(--event-heading-fs);
     }
 
     &__title {
         width: 100%;
-        padding-left: .2em;
+        padding-left: .4em;
         color: var(--main-white);
         margin-top: .2em;
         font-size: var(--event-heading-fs);
