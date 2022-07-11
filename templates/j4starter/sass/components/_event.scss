@@ -2,26 +2,15 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100%;
-
-    &__text-container {
-        background-color: var(--accent-black-trans-750);
-        height: 10%;
-    }
-
-    &__heading {
-        width: 100%;
-        padding-left: .4em;
-        padding-top: .2em;
-        color: var(--main-white);
-        font-size: var(--event-heading-fs);
-    }
+    color: var(--accent-100);
 
     &__title {
         width: 100%;
+        height: 5%;
         padding-left: .4em;
-        color: var(--main-white);
-        margin-top: .2em;
-        font-size: var(--event-heading-fs);
+        background-color: var(--accent-800-trans-750);
+        display: flex;
+        align-items: center;
     }
 
     &__picture {

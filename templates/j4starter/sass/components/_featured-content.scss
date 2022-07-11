@@ -2,14 +2,68 @@
 
   &__news {
     position: relative;
+    width: 5.5em;
     left: 0;
     top: 0;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--accent-700);
+
+    &::after {
+      content: "";
+      display: block;
+      width: 54%;
+      background-color: var(--accent-300);
+      height: .3em;
+      position: absolute;
+      top: 110%;
+      right: 50%;
+      z-index: -1;
+      transition: transform 400ms;
+      transform-origin: bottom left;
+    }
+
+    &:hover {
+      color: var(--accent-100);
+    }
+
+    &:hover::after {
+      transform: scaleY(4.5) scaleX(2);
+    }
   }
 
   &__upc-events {
     position: relative;
+    width: 10.5em;
     right: 0;
     top: 0;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--accent-700);
+
+    &::after {
+      content: "";
+      display: block;
+      width: 27%;
+      background-color: var(--accent-300);
+      height: .3em;
+      position: absolute;
+      top: 110%;
+      right: 75%;
+      z-index: -1;
+      transition: transform 400ms;
+      transform-origin: bottom left;
+    }
+
+    &:hover {
+      color: var(--accent-100);
+    }
+
+    &:hover::after {
+      transform: scaleY(4.5) scaleX(3.75);
+    }
   }
 
   &__content {
@@ -22,7 +76,7 @@
     width: 90%;
     height: 1.8em;
     position: fixed;
-    background-color: var(--main-white);
+    background-color: var(--accent-100);
     z-index: 5;
     padding-top: .2em;
     padding-left: .4em;
@@ -33,12 +87,13 @@
     aspect-ratio: 2 / 1;
     display: grid;
     grid-template-columns: repeat( 3, calc( (100% - 2em) / 3 ) );
-    grid-template-rows: repeat(2, calc( (100% - 2em) / 2 ));
+    grid-template-rows: 4% repeat(2, calc( (96% - 2em) / 2 ));
     column-gap: 1em;
     row-gap: 1em;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 1em;
+    margin-bottom: 4em;
   }
 }

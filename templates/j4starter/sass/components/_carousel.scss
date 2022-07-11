@@ -45,13 +45,23 @@
 
 @keyframes carousel-popup-animate {
     0% {
-        opacity: 0;
-        transform: translateX(20%);
+        transform: scaleX(0);
+        transform-origin: 100% 100%;
     }
 
     95% {
-        opacity: 1;
-        transform: translateX(0);
+        transform: scaleX(1);
+        transform-origin: 100% 100%;
+    }
+}
+
+@keyframes carousel-heading-animate {
+    0% {
+        width: 100%;
+    }
+
+    95% {
+        width: 80%;
     }
 }
 
@@ -82,7 +92,8 @@ ol, li {
         }
 
         .carousel__heading {
-            width: 80%
+            animation: carousel-heading-animate 1s ease-in-out 0s 1 normal forwards;
+            width: 80%;
         }
     }
 
@@ -92,13 +103,14 @@ ol, li {
     &__next {
         position: absolute;
         top: 0;
-        margin-top: 33%;
+        margin-top: 32%;
         width: 2rem;
         height: 2rem;
         transform: translateY(-34%);
         border-radius: 50%;
         font-size: 0;
         outline: 0;
+        z-index: 1;
     }
 
     &::before,
@@ -181,7 +193,6 @@ ol, li {
         top: 40%;
         left: 50%;
         transform: translate3d(-50%,-40%,70px);
-        font-size: 2em;
         width: 100%;
         height: 100%;
         display: grid;
@@ -199,9 +210,9 @@ ol, li {
 
     &__navigation-button {
         display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        background-color: rgba(255, 255, 225, 0.5);
+        width: 1.3rem;
+        height: 1.3rem;
+        background-color: var(--accent-700-trans-750);
         background-clip: content-box;
         border: 0.25rem solid transparent;
         border-radius: 50%;
@@ -214,10 +225,11 @@ ol, li {
         top: 0;
         width: 100%;
         height: 10%;
-        color: var(--main-white);
-        background-color: var(--accent-black-trans-750);
+        color: var(--accent-100);
+        background-color: var(--accent-800-trans-750);
         padding-left: .2em;
-        font-size: var(--carousel-heading-fs);
+        display: flex;
+        align-items: center;
     }
 
     &__picture {
@@ -241,9 +253,9 @@ ol, li {
         top: 0;
         left: 80%;
         display: none;
-        background-color: var(--accent-black-trans-750);
+        background-color: var(--accent-800-trans-750);
         font-size: 1rem;
-        color: var(--main-white);
+        color: var(--accent-100);
         animation: carousel-popup-animate 1s ease-in-out 0s 1 normal forwards;
     }
 
@@ -281,6 +293,7 @@ ol, li {
 
     .carousel__slide:last-child .carousel__snapper {
         animation-name: tostart, snap;
+        animation-duration: 12s;
     }
 }
 

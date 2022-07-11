@@ -1,23 +1,19 @@
 :root {
-    --main-blue: rgb(0, 22, 36);
-    --main-orange: rgb(223, 72, 7);
-    --main-white: rgb(255, 255, 255);
-    --accent-orange-1: rgb(172, 55, 5);
-    --accent-orange-2: rgb(255, 98, 8);
-    --accent-grey-1: rgb(202, 202, 202);
-    --accent-black-trans-750: rgba(0, 0, 0, .75);
+    --main-800: rgb(0, 22, 36);
+    --main-400: rgb(223, 72, 7);
+    --accent-800-trans-750: rgba(0, 0, 0, .75);
+    --accent-700-trans-750: rgba(87, 87, 87, .75);
+    --accent-700: rgb(69, 69, 69);
+    --accent-600: rgb(172, 55, 5);
+    --accent-300: rgb(255, 98, 8);
+    --accent-200: rgb(202, 202, 202);
+    --accent-100: rgb(255, 255, 255);
 
-    --font-size-50: .5em;
-    --font-size-80: .8em;
-    --font-size-100: 1em;
-    --font-size-120: 1.2em;
-    --font-size-130: 1.3em;
-    --font-size-150: 1.5em;
-    --font-size-160: 1.6em;
+    --fs-800: 2em;
+    --fs-400: 1.5em;
+    --fs-300: 1.4em;
+    --fs-200: 1.2em;
+    --fs-100: .8em;
 
     --top-left-logo: 15em;
-    --news-container-heading-fs: var(--font-size-150);
-    --news-container-text-fs: var(--font-size-150);
-    --carousel-heading-fs: var(--font-size-150);
-    --event-heading-fs: var(--font-size-150);
 }

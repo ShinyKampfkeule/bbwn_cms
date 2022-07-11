@@ -37,44 +37,21 @@ $counter = 1;
 
 ?>
 
-<h1 class="blog-content__header"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
-<section class="blog-content__content">
-	<?php foreach ($this->items as $key => &$item) : ?>
-		<?php if ( $firstElement === FALSE ) : ?>
-			<section>
-				<?php
-				$this->item = & $item;
-				echo $this->loadTemplate("item_layout1");
-				$firstElement = TRUE;
-				?>
-			</section>
-		<?php else : ?>
-			<?php if ( $counter === 1 ) : ?>
-				<section class="triple-content grid-element-1-1">
-					<article class="grid-element-1-1">
-						<?php
-						$this->item = & $item;
-						echo $this->loadTemplate("item_layout2");
-						?>
-					</article>
-			<?php elseif ( $counter === 2 ) : ?>
-					<article class="grid-element-1-2">
-						<?php
-						$this->item = & $item;
-						echo $this->loadTemplate("item_layout2");
-						?>
-					</article>
-			<?php elseif ( $counter === 3 ) : ?>
-					<article class="grid-element-1-3">
-						<?php
-						$this->item = & $item;
-						echo $this->loadTemplate("item_layout2");
-						?>
-					</article>
-				</section>
-				<?php $counter = 0 ?>
-			<?php endif; ?>
-			<?php $counter = $counter + 1 ?>
-		<?php endif; ?>
-	<?php endforeach; ?>
+<h1 class="blog-content__header heading1"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
+<section class="blog-content__test">
+	<section class="blog-content__leading blog-content__bc"></section>
 </section>
+<section class="blog-content__test2">
+	<div class="grid-element-1-1 blog-content__bc"></div>
+	<div class="grid-element-1-2 blog-content__bc"></div>
+	<div class="grid-element-1-3 blog-content__bc"></div>
+	<div class="grid-element-1-4 blog-content__bc"></div>
+	<div class="grid-element-2-1 blog-content__bc"></div>
+	<div class="grid-element-2-2_3 blog-content__bc"></div>
+	<div class="grid-element-2-4 blog-content__bc"></div>
+	<div class="grid-element-3-1 blog-content__bc"></div>
+	<div class="grid-element-3-2 blog-content__bc"></div>
+	<div class="grid-element-3-3 blog-content__bc"></div>
+	<div class="grid-element-3-4 blog-content__bc"></div>
+</section>
+<?php dump($this) ?>

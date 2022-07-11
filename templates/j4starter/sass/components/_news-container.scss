@@ -24,7 +24,7 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100%;
-    color: var(--main-white);
+    color: var(--accent-100);
 
     &:hover {
         .news-container__popup {
@@ -44,16 +44,16 @@
     }
 
     &__heading {
-        background-color: var(--accent-black-trans-750);
+        background-color: var(--accent-800-trans-750);
         width: 100%;
         height: 10%;
         padding-left: .4em;
-        padding-top: .4em;
-        font-size: var(--news-container-heading-fs);
+        display: flex;
+        align-items: center;
     }
 
     &__popup {
-        background-color: var(--accent-black-trans-750);
+        background-color: var(--accent-800-trans-750);
         position: relative;
         top: 10%;
         height: 20%;
@@ -62,8 +62,8 @@
     }
 
     &__text {
-        width: calc(100% - .2em);
-        padding-left: .2em;
+        width: 80%;
+        padding-left: .6em;
         padding-top: .2em;
         opacity: 0;
         animation: news-text-animate 1s ease 0s 1 normal forwards;
