@@ -47,7 +47,6 @@
     transition: 0.3s cubic-bezier(0.4, 0.2, 0.5, 1.4);
     transform-origin: 1.43em -0.43em;
   }
-
   .awesomplete > ul[hidden],
 .awesomplete > ul:empty {
     opacity: 0;

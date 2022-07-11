@@ -6,7 +6,7 @@
         overflow: hidden;
         position: relative;
         padding: 0;
-        border: .5px solid var(--accent-orange-2);
+        border: .5px solid var(--accent-300);
     
         &:hover {
             .layer2__hover {
@@ -57,7 +57,7 @@
         z-index: 10;
         top: 0;
         left: 0;
-        color: var(--main-white);
+        color: var(--accent-100);
         display: none;
     }
 }
