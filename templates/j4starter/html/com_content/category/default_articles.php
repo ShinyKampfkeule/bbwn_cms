@@ -83,7 +83,7 @@ $ranNumber = rand(0, $n - 1)
 		?>
 	<?php else: ?>
 		<?php 
-			$bigBild = "/images/placeholder/1575466871112.jfif";
+			$bigBild = "images/placeholder/1575466871112.jfif";
 		?>
 	<?php endif; ?>
 	<picture class="article-list__top-article__image">
@@ -109,7 +109,7 @@ $ranNumber = rand(0, $n - 1)
 			?>
 		<?php else: ?>
 			<?php 
-				$bild = "/images/placeholder/1575466871112.jfif";
+				$bild = "images/placeholder/1575466871112.jfif";
 			?>
 		<?php endif; ?>
 		<section class="article-list__small-article">
