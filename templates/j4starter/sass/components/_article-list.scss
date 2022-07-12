@@ -14,9 +14,10 @@
         flex-direction: row;
         flex-wrap: wrap;
         width: 90%;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         margin-left: auto;
         margin-right: auto;
+        gap: 2%;
     }
 
     &__column {
@@ -63,12 +64,17 @@
             padding: 1em;
             background-color: var(--accent-700-trans-750);
             width: 100%;
+
+            p {
+                width: 90%;
+                margin-top: .5em;
+            }
         }
     }
 
     &__small-article {
 
-        width: 30%;
+        width: 32%;
         position: relative;
         margin-bottom: 2em;
 

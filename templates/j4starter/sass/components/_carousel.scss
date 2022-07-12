@@ -254,7 +254,6 @@ ol, li {
         left: 80%;
         display: none;
         background-color: var(--accent-800-trans-750);
-        font-size: 1rem;
         color: var(--accent-100);
         animation: carousel-popup-animate 1s ease-in-out 0s 1 normal forwards;
     }
@@ -268,7 +267,6 @@ ol, li {
         padding-left: 1em;
         opacity: 0;
         animation: carousel-text-animate 1s ease-in-out 0s 1 normal forwards;
-        font-size: var(--carousel-text-fs);
     }
 
     &:hover .carousel__snapper,

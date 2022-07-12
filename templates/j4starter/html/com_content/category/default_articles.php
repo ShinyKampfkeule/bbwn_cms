@@ -93,8 +93,12 @@ $ranNumber = rand(0, $n - 1)
 		<h2 class="heading1">
 			<?php echo ( $bigArticle -> title ) ?>
 		</h2>
-		<p class="text1">
-			<?php echo ( $bigArticle -> jcfields[3] -> rawvalue ) ?>
+		<p class="text2">
+			<?php if ( strlen ( $bigArticle -> jcfields[3] -> rawvalue ) > 390 ) : ?>
+				<?php echo substr ( $bigArticle -> jcfields[3] -> rawvalue, 0, 390 ); ?> ...
+			<?php else : ?>
+				<?php echo $bigArticle -> jcfields[3] -> rawvalue ?>
+			<?php endif ?>
 		</p>
 	</section>
 </section>
@@ -118,7 +122,7 @@ $ranNumber = rand(0, $n - 1)
 			</picture>
 			<h2 class="heading2 article-list__small-article__heading">
 				<?php if ( strlen ( $article -> title ) > 45 ) : ?>
-					<?php echo substr( $article -> title, 0, 45 ); ?> ...
+					<?php echo substr ( $article -> title, 0, 45 ); ?> ...
 				<?php else : ?>
 					<?php echo $article -> title ?>
 				<?php endif ?>
