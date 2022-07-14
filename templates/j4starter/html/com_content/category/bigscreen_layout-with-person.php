@@ -15,6 +15,7 @@
   $qrcode = "https://chart.googleapis.com/chart?cht={$cht}&chs={$chs}&chl={$chl}&choe={$choe}";
 ?>
 
+<?php dump($_SERVER) ?>
 <img class="d-block w-100 bigscreen__layoutwp__bgimg" src="<?php echo $bgimg ?>" alt="Slide <?php echo $key + 1 ?>">
 <img src="<?php echo $personimg ?>" alt="Person">
 <h1><?php echo $article -> jcfields[16] -> rawvalue ?></h1>
