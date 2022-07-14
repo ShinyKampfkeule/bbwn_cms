@@ -37,14 +37,12 @@ $counter = 1;
 
 ?>
 
-<?php dump($this -> items) ?>
-
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
+  <div class="carousel-inner full-height">
 	<?php foreach ( $this -> items as $key => $article ) : ?>
-		<div class="carousel-item <?php if ( $firstElement === FALSE ) : ?><?php echo "active" ?><?php endif; ?>">
+		<div class="carousel-item <?php if ( $firstElement === FALSE ) : ?><?php echo "active" ?><?php endif; ?> full-height">
 			<?php $layout = $article -> jcfields[19] -> rawvalue[0] ?>
-			<?php echo $this -> loadTemplate ( $layout ) ?>
+			<?php include "bigscreen_$layout.php" ?>
 		</div>
 		<?php $firstElement = TRUE ?>
 	<?php endforeach; ?>

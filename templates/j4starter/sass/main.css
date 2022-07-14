@@ -122,8 +122,8 @@ select {
     --top-left-logo: 10em;
     --news-container-heading-fs: var(--font-size-100);
     --news-container-text-fs: var(--font-size-80);
-    --carousel-heading-fs: var(--font-size-80);
-    --carousel-text-fs: var(--font-size-80);
+    --own-carousel-heading-fs: var(--font-size-80);
+    --own-carousel-text-fs: var(--font-size-80);
     --event-heading-fs: var(--font-size-130);
   }
 }
@@ -132,8 +132,8 @@ select {
     --top-left-logo: 12em;
     --news-container-heading-fs: var(--font-size-120);
     --news-container-text-fs: var(--font-size-100);
-    --carousel-heading-fs: var(--font-size-100);
-    --carousel-text-fs: var(--font-size-100);
+    --own-carousel-heading-fs: var(--font-size-100);
+    --own-carousel-text-fs: var(--font-size-100);
     --event-heading-fs: var(--font-size-160);
   }
 }
@@ -269,6 +269,10 @@ select {
 
 .flex {
   display: flex;
+}
+
+.full-height {
+  height: 100%;
 }
 
 .top-left-logo {
@@ -753,7 +757,7 @@ select {
     scroll-snap-align: center;
   }
 }
-@-webkit-keyframes carousel-popup-animate {
+@-webkit-keyframes own_own-carousel-popup-animate {
   0% {
     transform: scaleX(0);
     transform-origin: 100% 100%;
@@ -763,7 +767,7 @@ select {
     transform-origin: 100% 100%;
   }
 }
-@keyframes carousel-popup-animate {
+@keyframes own_own-carousel-popup-animate {
   0% {
     transform: scaleX(0);
     transform-origin: 100% 100%;
@@ -773,7 +777,7 @@ select {
     transform-origin: 100% 100%;
   }
 }
-@-webkit-keyframes carousel-heading-animate {
+@-webkit-keyframes own-carousel-heading-animate {
   0% {
     width: 100%;
   }
@@ -781,7 +785,7 @@ select {
     width: 80%;
   }
 }
-@keyframes carousel-heading-animate {
+@keyframes own-carousel-heading-animate {
   0% {
     width: 100%;
   }
@@ -789,7 +793,7 @@ select {
     width: 80%;
   }
 }
-@-webkit-keyframes carousel-text-animate {
+@-webkit-keyframes own-carousel-text-animate {
   95% {
     opacity: 0;
   }
@@ -797,7 +801,7 @@ select {
     opacity: 1;
   }
 }
-@keyframes carousel-text-animate {
+@keyframes own-carousel-text-animate {
   95% {
     opacity: 0;
   }
@@ -811,20 +815,20 @@ ol, li {
   padding: 0;
 }
 
-.carousel {
+.own-carousel {
   position: relative;
   perspective: 100px;
   height: 100%;
 }
-.carousel:hover .carousel__popup {
+.own-carousel:hover .own-carousel__popup {
   display: block;
 }
-.carousel:hover .carousel__heading {
-  -webkit-animation: carousel-heading-animate 1s ease-in-out 0s 1 normal forwards;
-          animation: carousel-heading-animate 1s ease-in-out 0s 1 normal forwards;
+.own-carousel:hover .own-carousel__heading {
+  -webkit-animation: own-carousel-heading-animate 1s ease-in-out 0s 1 normal forwards;
+          animation: own-carousel-heading-animate 1s ease-in-out 0s 1 normal forwards;
   width: 80%;
 }
-.carousel::before, .carousel::after, .carousel__prev, .carousel__next {
+.own-carousel::before, .own-carousel::after, .own-carousel__prev, .own-carousel__next {
   position: absolute;
   top: 0;
   margin-top: 32%;
@@ -836,13 +840,13 @@ ol, li {
   outline: 0;
   z-index: 1;
 }
-.carousel::before, .carousel__prev {
+.own-carousel::before, .own-carousel__prev {
   left: 1rem;
 }
-.carousel::after, .carousel__next {
+.own-carousel::after, .own-carousel__next {
   right: 1rem;
 }
-.carousel::before, .carousel::after {
+.own-carousel::before, .own-carousel::after {
   content: "";
   z-index: 1;
   background-color: rgba(255, 255, 225, 0.5);
@@ -855,16 +859,16 @@ ol, li {
   text-align: center;
   pointer-events: none;
 }
-.carousel::before {
+.own-carousel::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
 }
-.carousel::after {
+.own-carousel::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
 }
-.carousel *::-webkit-scrollbar {
+.own-carousel *::-webkit-scrollbar {
   display: none;
 }
-.carousel__viewport {
+.own-carousel__viewport {
   position: absolute;
   top: 0;
   right: 0;
@@ -877,12 +881,12 @@ ol, li {
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
 }
-.carousel__slide {
+.own-carousel__slide {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
 }
-.carousel__slide:before {
+.own-carousel__slide:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -891,7 +895,7 @@ ol, li {
   color: #fff;
   font-size: 2em;
 }
-.carousel__snapper {
+.own-carousel__snapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -899,7 +903,7 @@ ol, li {
   height: 100%;
   scroll-snap-align: center;
 }
-.carousel__content {
+.own-carousel__content {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -910,14 +914,14 @@ ol, li {
   grid-template-columns: 100%;
   grid-template-rows: 100%;
 }
-.carousel__navigation {
+.own-carousel__navigation {
   position: absolute;
   right: 0;
   bottom: 1em;
   left: 0;
   text-align: center;
 }
-.carousel__navigation-button {
+.own-carousel__navigation-button {
   display: inline-block;
   width: 1.3rem;
   height: 1.3rem;
@@ -928,7 +932,7 @@ ol, li {
   font-size: 0;
   transition: transform 0.1s;
 }
-.carousel__heading {
+.own-carousel__heading {
   position: absolute;
   top: 0;
   width: 100%;
@@ -939,7 +943,7 @@ ol, li {
   display: flex;
   align-items: center;
 }
-.carousel__picture {
+.own-carousel__picture {
   position: absolute;
   top: 0;
   left: 0;
@@ -947,11 +951,11 @@ ol, li {
   width: 100%;
   height: 100%;
 }
-.carousel__image {
+.own-carousel__image {
   width: 100%;
   height: 100%;
 }
-.carousel__popup {
+.own-carousel__popup {
   width: 20%;
   height: 100%;
   position: absolute;
@@ -960,10 +964,10 @@ ol, li {
   display: none;
   background-color: var(--accent-800-trans-750);
   color: var(--accent-100);
-  -webkit-animation: carousel-popup-animate 1s ease-in-out 0s 1 normal forwards;
-          animation: carousel-popup-animate 1s ease-in-out 0s 1 normal forwards;
+  -webkit-animation: own-carousel-popup-animate 1s ease-in-out 0s 1 normal forwards;
+          animation: own-carousel-popup-animate 1s ease-in-out 0s 1 normal forwards;
 }
-.carousel__text {
+.own-carousel__text {
   position: relative;
   top: 0;
   left: 0;
@@ -971,20 +975,20 @@ ol, li {
   width: 85%;
   padding-left: 1em;
   opacity: 0;
-  -webkit-animation: carousel-text-animate 1s ease-in-out 0s 1 normal forwards;
-          animation: carousel-text-animate 1s ease-in-out 0s 1 normal forwards;
+  -webkit-animation: own-carousel-text-animate 1s ease-in-out 0s 1 normal forwards;
+          animation: own-carousel-text-animate 1s ease-in-out 0s 1 normal forwards;
 }
-.carousel:hover .carousel__snapper,
-.carousel .carousel:focus-within .carousel__snapper {
+.own-carousel:hover .own-carousel__snapper,
+.own-carousel .own-carousel:focus-within .own-carousel__snapper {
   -webkit-animation-name: none;
           animation-name: none;
 }
-.carousel__navigation-list, .carousel__navigation-item {
+.own-carousel__navigation-list, .own-carousel__navigation-item {
   display: inline-block;
 }
 
 @media (hover: hover) {
-  .carousel__snapper {
+  .own-carousel__snapper {
     -webkit-animation-name: tonext, snap;
             animation-name: tonext, snap;
     -webkit-animation-timing-function: ease;
@@ -994,7 +998,7 @@ ol, li {
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
   }
-  .carousel__slide:last-child .carousel__snapper {
+  .own-carousel__slide:last-child .own-carousel__snapper {
     -webkit-animation-name: tostart, snap;
             animation-name: tostart, snap;
     -webkit-animation-duration: 12s;
@@ -1002,7 +1006,7 @@ ol, li {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .carousel__snapper {
+  .own-carousel__snapper {
     -webkit-animation-name: none;
             animation-name: none;
   }
@@ -1215,7 +1219,6 @@ ol, li {
   gap: 2%;
 }
 .article-list__column {
-  background-color: aquamarine;
   flex: 0 0 30%;
   aspect-ratio: 2/1;
   margin-bottom: 1em;
@@ -1311,4 +1314,16 @@ ol, li {
 
 .cat-children {
   display: none;
+}
+
+.bigscreen__layoutwp__bgimg {
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel {
+  height: 100vh;
 }/*# sourceMappingURL=main.css.map */

@@ -35,7 +35,7 @@ $this -> news_2 = FALSE;
 		<a href="/index.php?option=com_content&view=category&id=8&Itemid=102" class="featured-content__news heading1 grid-element-1-1">Neuigkeiten</a>	
 		<a href="/index.php?option=com_content&view=category&id=9&Itemid=103" class="featured-content__upc-events heading1 grid-element-1-3">Nächste Veranstaltung</a>
 		<section class="grid-element-2-1_2"> 
-			<?php echo $this -> loadTemplate("carousel"); ?>
+			<?php echo $this -> loadTemplate("own-carousel"); ?>
 		</section>
 		<section class="grid-element-2_3-3 event">
 		<?php echo $this -> loadTemplate("event"); ?>

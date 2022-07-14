@@ -9,7 +9,7 @@ class JConfig {
 	public $captcha = '0';
 	public $list_limit = 20;
 	public $access = 1;
-	public $debug = true;
+	public $debug = false;
 	public $debug_lang = false;
 	public $debug_lang_const = true;
 	public $dbtype = 'mysqli';
@@ -57,7 +57,7 @@ class JConfig {
 	public $feed_limit = 10;
 	public $feed_email = 'none';
 	public $log_path = 'administrator/logs';
-	public $tmp_path = 'tmp';
+	public $tmp_path = 'D:\\Kevin Zeugs\\Studium\\CMS\\bbwn_cms/tmp';
 	public $lifetime = 15;
 	public $session_handler = 'database';
 	public $shared_session = false;

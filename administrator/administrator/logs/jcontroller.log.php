@@ -117,3 +117,6 @@
 2022-07-12T10:11:23+00:00	INFO ::1	controller	Checking edit ID com_content.edit.article.12: 1 Array (     [0] => 12 ) 
 2022-07-12T10:12:01+00:00	INFO ::1	controller	Holding edit ID com_content.edit.article.12 Array (     [0] => 12 ) 
 2022-07-12T10:12:03+00:00	INFO ::1	controller	Checking edit ID com_content.edit.article.12: 1 Array (     [0] => 12 ) 
+2022-07-14T09:25:07+00:00	INFO ::1	controller	Holding edit ID com_content.edit.article.12 Array (     [0] => 12 ) 
+2022-07-14T09:25:08+00:00	INFO ::1	controller	Checking edit ID com_content.edit.article.12: 1 Array (     [0] => 12 ) 
+2022-07-14T09:26:01+00:00	INFO ::1	controller	Releasing edit ID com_content.edit.article.12 Array ( ) 
