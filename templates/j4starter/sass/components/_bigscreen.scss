@@ -50,8 +50,11 @@
             height: 100%;
         }
 
-        &__name,
-        &__welcome {
+        &__wop {
+            left: .5em;
+        }
+
+        &__wp {
             left: 10em;
         }
     }

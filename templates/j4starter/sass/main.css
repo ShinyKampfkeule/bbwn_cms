@@ -20,6 +20,7 @@
   --fw-100: 100;
   --blur: 4px;
   --top-left-logo: 15em;
+  --footer-text-pos: 10em;
 }
 
 /* Box sizing rules */
@@ -1367,7 +1368,10 @@ ol, li {
   right: 0;
   height: 100%;
 }
-.bigscreen__footer__name, .bigscreen__footer__welcome {
+.bigscreen__footer__wop {
+  left: 0.5em;
+}
+.bigscreen__footer__wp {
   left: 10em;
 }
 .bigscreen__info {
