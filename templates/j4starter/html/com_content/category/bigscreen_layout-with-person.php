@@ -2,11 +2,10 @@
   $url_name = $_SERVER['SERVER_NAME']; 
 
   if ( $url_name !== "localhost" ) {
-    $url_name += "/kevin";
+    $url_name = "{$url_name}/kevin";
   } else {
     $url_name = "";
   }
-
   $bgimg_id = json_decode($article->jcfields[15]->rawvalue)->itemId;
   $bgimg_name = json_decode($article->jcfields[15]->rawvalue)->filename;
   $bgimg = "{$url_name}/images/econa/fields/15/com_content_article/{$bgimg_id}/{$bgimg_name}_L.jpg";
