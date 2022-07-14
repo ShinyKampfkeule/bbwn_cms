@@ -10,7 +10,7 @@
   $url_id = $article -> id;
   $cht = "qr";
   $chs = "300x300";
-  $chl = urlencode("{$url_name}/index.php?option=com_content&view=article&view=article&id={$url_id}");
+  $chl = urlencode("{$url_name}/kevin/index.php?option=com_content&view=article&view=article&id={$url_id}");
   $choe = "UTF-8";
   $qrcode = "https://chart.googleapis.com/chart?cht={$cht}&chs={$chs}&chl={$chl}&choe={$choe}";
 ?>
