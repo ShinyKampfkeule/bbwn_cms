@@ -2,17 +2,17 @@
   $url_name = $_SERVER['SERVER_NAME']; 
 
   if ( $url_name !== "localhost" ) {
-    $url_name = "{$url_name}";
+    $link_name = "/kevin";
   } else {
-    $url_name = "";
+    $link_name = "";
   }
   $bgimg_id = json_decode($article->jcfields[15]->rawvalue)->itemId;
   $bgimg_name = json_decode($article->jcfields[15]->rawvalue)->filename;
-  $bgimg = "/images/econa/fields/15/com_content_article/{$bgimg_id}/{$bgimg_name}_L.jpg";
-  $phimg = "/images/placeholder/1575466871112.jfif";
+  $bgimg = "{$link_name}/images/econa/fields/15/com_content_article/{$bgimg_id}/{$bgimg_name}_L.jpg";
+  $phimg = "{$link_name}/images/placeholder/1575466871112.jfif";
   $personimg_id = json_decode($article->jcfields[17]->rawvalue)->itemId;
   $personimg_name = json_decode($article->jcfields[17]->rawvalue)->filename;
-  $personimg = "/images/econa/fields/17/com_content_article/{$personimg_id}/{$personimg_name}_L.jpg";
+  $personimg = "{$link_name}/images/econa/fields/17/com_content_article/{$personimg_id}/{$personimg_name}_L.jpg";
   $url_id = $article -> id;
   $cht = "qr";
   $chs = "300x300";
