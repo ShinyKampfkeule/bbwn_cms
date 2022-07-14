@@ -1,5 +1,6 @@
 :root {
   --main-800: rgb(0, 22, 36);
+  --main-400-trans-750: rgba(223, 72, 7, .75);
   --main-400: rgb(223, 72, 7);
   --accent-800-trans-750: rgba(0, 0, 0, .75);
   --accent-700-trans-750: rgba(87, 87, 87, .75);
@@ -273,6 +274,10 @@ select {
 
 .full-height {
   height: 100%;
+}
+
+.width-100 {
+  width: 100%;
 }
 
 .top-left-logo {
@@ -1322,6 +1327,12 @@ ol, li {
   position: absolute;
   top: 0;
   left: 0;
+}
+.bigscreen__footer {
+  background-color: var(--main-400-trans-750);
+  position: absolute;
+  bottom: 0;
+  height: 15em;
 }
 
 .carousel {

@@ -1,5 +1,7 @@
 .bigscreen {
+
     &__layoutwp {
+
         &__bgimg {
             height: 100%;
             z-index: -1;
@@ -7,6 +9,13 @@
             top: 0;
             left: 0;
         }
+    }
+
+    &__footer {
+        background-color: var(--main-400-trans-750);
+        position: absolute;
+        bottom: 0;
+        height: 15em;
     }
 }
 

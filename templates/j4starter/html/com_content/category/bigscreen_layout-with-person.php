@@ -4,6 +4,7 @@
   if ( $url_name !== "localhost" ) {
     $url_name = "{$url_name}/kevin";
   }
+
   $bgimg_id = json_decode($article->jcfields[15]->rawvalue)->itemId;
   $bgimg_name = json_decode($article->jcfields[15]->rawvalue)->filename;
   $bgimg = "images/econa/fields/15/com_content_article/{$bgimg_id}/{$bgimg_name}_L.jpg";
@@ -19,12 +20,14 @@
   $qrcode = "https://chart.googleapis.com/chart?cht={$cht}&chs={$chs}&chl={$chl}&choe={$choe}";
 ?>
 
-<?php dump($_SERVER) ?>
 <img class="d-block w-100 bigscreen__layoutwp__bgimg" src="<?php echo $bgimg ?>" alt="Slide <?php echo $key + 1 ?>">
-<img src="<?php echo $personimg ?>" alt="Person">
-<h1><?php echo $article -> jcfields[16] -> rawvalue ?></h1>
+
+<section class="flex bigscreen__footer width-100">
+  <img class="bigscreen__footer__image" src="<?php echo $personimg ?>" alt="Person">
+  <span class="bigscreen__footer__welcome">Wir begrüßen am Campus des BBWN:</span>
+  <h1 class="bigscreen__footer__name"><?php echo $article -> jcfields[16] -> rawvalue ?></h1>
+  <img class="bigscreen__footer__qrcode" src="<?php echo $qrcode ?>" alt="QR Code">
+</section>
 <section>
-  <span>Wir begrüßen am Campus des BBWN:</span>
   <span><?php echo $article -> jcfields[18] -> rawvalue ?></span>
-  <img src="<?php echo $qrcode ?>" alt="QR Code">
 </section>
