@@ -2,7 +2,7 @@
   $url_name = $_SERVER['SERVER_NAME']; 
 
   if ( $url_name !== "localhost" ) {
-    $url_name = "{$url_name}/kevin";
+    $url_name = "{$url_name}";
   } else {
     $url_name = "";
   }
