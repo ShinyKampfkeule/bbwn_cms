@@ -1,4 +1,5 @@
 :root {
+  --main-800-trans-750: rgba(0, 22, 36, .75);
   --main-800: rgb(0, 22, 36);
   --main-400-trans-750: rgba(223, 72, 7, .75);
   --main-400: rgb(223, 72, 7);
@@ -9,11 +10,15 @@
   --accent-300: rgb(255, 98, 8);
   --accent-200: rgb(202, 202, 202);
   --accent-100: rgb(255, 255, 255);
+  --fs-1000: 4em;
   --fs-800: 2em;
   --fs-400: 1.5em;
   --fs-300: 1.4em;
   --fs-200: 1.2em;
   --fs-100: 1em;
+  --fw-700: 700;
+  --fw-100: 100;
+  --blur: 4px;
   --top-left-logo: 15em;
 }
 
@@ -1321,18 +1326,77 @@ ol, li {
   display: none;
 }
 
+.bigscreen__logo {
+  width: 20%;
+  position: absolute;
+  top: 2em;
+  left: 2em;
+}
 .bigscreen__layoutwp__bgimg {
   height: 100%;
   z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
+  filter: blur(var(--blur));
+  -webkit-filter: blur(var(--blur));
 }
 .bigscreen__footer {
   background-color: var(--main-400-trans-750);
   position: absolute;
   bottom: 0;
   height: 15em;
+}
+.bigscreen__footer__image {
+  width: 35em;
+  height: 35em;
+  position: absolute;
+  bottom: 2.5em;
+  left: 2.5em;
+}
+.bigscreen__footer__welcome {
+  top: 0.25em;
+  font-weight: var(--fw-100);
+}
+.bigscreen__footer__name {
+  bottom: 0.75em;
+  font-weight: var(--fw-700);
+}
+.bigscreen__footer__qrcode {
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+.bigscreen__footer__name, .bigscreen__footer__welcome {
+  left: 10em;
+}
+.bigscreen__info {
+  background-color: var(--main-800-trans-750);
+  width: 100em;
+  height: 41em;
+  position: absolute;
+  right: 0;
+  top: 3em;
+  border-radius: 10px 0 0 10px;
+}
+.bigscreen__info__article-text {
+  font-size: var(--fs-800);
+  padding: 1em;
+  width: 80%;
+  line-height: 1.7em;
+}
+.bigscreen__info__qrcode-text {
+  bottom: 0;
+  padding-left: 0.5em;
+  padding-bottom: 0.1em;
+  font-weight: var(--fw-700);
+}
+.bigscreen__footer__name, .bigscreen__footer__welcome, .bigscreen__info__qrcode-text {
+  font-size: var(--fs-1000);
+}
+.bigscreen__footer__name, .bigscreen__footer__welcome, .bigscreen__info__article-text, .bigscreen__info__qrcode-text {
+  position: absolute;
+  color: var(--accent-100);
 }
 
 .carousel {
