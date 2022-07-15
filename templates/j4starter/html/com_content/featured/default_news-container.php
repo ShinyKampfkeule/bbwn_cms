@@ -17,7 +17,7 @@ defined('_JEXEC') or die;
         $name = json_decode( $this -> news_1 -> jcfields[13] -> rawvalue ) -> filename;
         $bild6 = "images/econa/fields/13/com_content_article/{$id}/{$name}_L.jpg";
     ?>
-    <h2 class="news-container__heading grid-element-1-1 <?php echo( strlen( $this -> news_1 -> title ) <= 40 ) ? 'heading2' : 'heading3' ?>"><?php echo substr( $this -> news_1 -> title, 0, 50 ); ?></h2>
+    <h2 class="news-container__heading grid-element-1-1 <?php echo( strlen( $this -> news_1 -> title ) <= 40 ) ? 'heading-400' : 'heading-300' ?>"><?php echo substr( $this -> news_1 -> title, 0, 50 ); ?></h2>
     <?php if ( $videoId !== "" ) : ?>
         <iframe class="news-container__video grid-element-1-1" src="<?php echo $videoLink ?>"></iframe>
     <?php else : ?>
@@ -26,7 +26,7 @@ defined('_JEXEC') or die;
         </picture>
     <?php endif; ?>
     <section class="news-container__popup grid-element-1-1">
-        <p class="news-container__text text2">
+        <p class="news-container__text text-100">
             <?php echo substr( $this -> news_1 -> jcfields[3] -> rawvalue, 0, 170 );  ?>...
         </p>
     </section>
@@ -37,12 +37,12 @@ defined('_JEXEC') or die;
         $name = json_decode( $this -> news_2 -> jcfields[4] -> rawvalue ) -> filename;
         $bild7 = "images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
     ?>
-    <h2 class="news-container__heading grid-element-1-1 heading2"><?php echo substr( $this -> news_2 -> title, 0, 50 ); ?></h2>
+    <h2 class="news-container__heading grid-element-1-1 heading-400"><?php echo substr( $this -> news_2 -> title, 0, 50 ); ?></h2>
     <picture class="news-container__picture grid-element-1-1">
         <img class="news-container__image"  src="<?php echo $bild7 ?>" />
     </picture>
     <section class="news-container__popup grid-element-1-1">
-        <p class="news-container__text text2">
+        <p class="news-container__text text-100">
             <?php echo substr( $this -> news_2 -> jcfields[3] -> rawvalue, 0, 170 );  ?>...
         </p>
     </section>

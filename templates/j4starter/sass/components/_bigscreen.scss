@@ -4,17 +4,28 @@
         width: 20%;
         position: absolute;
         top: 2em;
-        left: 2em;
+
+        &__right {
+            left: 2em;
+        }
+
+        &__left {
+            right: 2em;
+        }
     }
 
     &__layoutwp {
 
         &__bgimg {
             height: 100%;
+            width: 100%;
             z-index: -1;
             position: absolute;
             top: 0;
             left: 0;
+        }
+
+        &__bgblur {
             filter: blur(var(--blur));
             -webkit-filter: blur(var(--blur));
         }
@@ -25,6 +36,14 @@
         position: absolute;
         bottom: 0;
         height: 15em;
+        align-items: center;
+        -webkit-box-shadow: 0px -10px 15px -5px var(--accent-600); 
+        box-shadow: 0px -10px 15px -5px var(--accent-600);
+
+        &__heading {
+            color: var(--accent-100);
+            padding-left: 1%;
+        }
 
         &__image {
             width: 35em;
@@ -61,12 +80,23 @@
 
     &__info {
         background-color: var(--main-800-trans-750);
-        width: 100em;
+        width: 60%;
         height: 41em;
         position: absolute;
-        right: 0;
-        top: 3em;
-        border-radius: 10px 0 0 10px;
+        -webkit-box-shadow: 0px 1px 15px 5px var(--main-800); 
+        box-shadow: 0px 1px 15px 5px var(--main-800);
+
+        &__right {
+            right: 0;
+            top: 3em;
+            border-radius: 10px 0 0 10px;
+        }
+
+        &__left {
+            left: 0;
+            top: 16em;
+            border-radius: 0 10px 10px 0;
+        }
 
         &__article-text {
             font-size: var(--fs-800);
@@ -87,7 +117,6 @@
     &__footer__welcome,
     &__info__qrcode-text {
         font-size: var(--fs-1000);
-
     }
 
     &__footer__name,

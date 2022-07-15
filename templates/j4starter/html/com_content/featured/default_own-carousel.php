@@ -34,7 +34,7 @@ defined('_JEXEC') or die;
                         <img class="own-carousel__image" src="<?php echo $bild ?>" />
                     </picture>
                     <section class="own-carousel__popup">
-                        <p class="own-carousel__text text2">
+                        <p class="own-carousel__text text-100">
                             <?php echo substr( $item -> jcfields[3] -> rawvalue, 0, 250 );  ?>...
                         </p>
                     </section>

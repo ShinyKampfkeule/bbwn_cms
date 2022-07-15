@@ -90,10 +90,10 @@ $ranNumber = rand(0, $n - 1)
 		<img src="<?php echo $bigBild ?>" />
 	</picture>
 	<section class="article-list__top-article__content">
-		<h2 class="heading1">
+		<h2 class="heading-400">
 			<?php echo ( $bigArticle -> title ) ?>
 		</h2>
-		<p class="text2">
+		<p class="text-100">
 			<?php if ( strlen ( $bigArticle -> jcfields[3] -> rawvalue ) > 390 ) : ?>
 				<?php echo substr ( $bigArticle -> jcfields[3] -> rawvalue, 0, 390 ); ?> ...
 			<?php else : ?>

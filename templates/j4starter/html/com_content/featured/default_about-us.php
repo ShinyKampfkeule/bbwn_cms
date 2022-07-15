@@ -9,7 +9,7 @@
 
 defined('_JEXEC') or die;
 ?>
-<a href="http://localhost/index.php?option=com_content&view=article&id=7" class="about-us__heading heading1"><?php echo $this -> about -> title ?></a>
+<a href="http://localhost/index.php?option=com_content&view=article&id=7" class="about-us__heading heading-800"><?php echo $this -> about -> title ?></a>
 <section class="about-us">
     <?php 
         $id = json_decode( $this -> about -> jcfields[12] -> rawvalue ) -> itemId;
@@ -20,11 +20,11 @@ defined('_JEXEC') or die;
     <picture class="grid-element-1-1">
         <img class="about-us__image" src="<?php echo $bild8 ?>" />
     </picture>
-    <p class="grid-element-1-2 text1 about-us__text">
+    <p class="grid-element-1-2 text-200 about-us__text">
         <?php echo $this -> about -> jcfields[2] -> rawvalue;  ?>
     </p>
     <div class="grid-element-1-3 about-us__facts">
-        <span class="heading1 grid-element-1-1_2 about-us__keyhead">
+        <span class="heading-800 grid-element-1-1_2 about-us__keyhead">
             Unsere Keyfacts
         </span>
         <span class="heading2 about-us__fact grid-element-2-1">
@@ -39,7 +39,7 @@ defined('_JEXEC') or die;
         <span class="heading2 about-us__fact grid-element-3-2">
             200 Teilnehmende in Internaten
         </span>
-        <span class="heading1 about-us__fact grid-element-4-1_2">
+        <span class="heading-800 about-us__fact grid-element-4-1_2">
             über 40 Ausbildungsberufe
         </span>
     </div>
