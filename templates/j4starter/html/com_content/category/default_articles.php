@@ -120,7 +120,7 @@ $ranNumber = rand(0, $n - 1)
 			<picture class="article-list__small-article__image">
 				<img src="<?php echo $bild ?>" />
 			</picture>
-			<h2 class="heading2 article-list__small-article__heading">
+			<h2 class="heading-400 article-list__small-article__heading">
 				<?php if ( strlen ( $article -> title ) > 45 ) : ?>
 					<?php echo substr ( $article -> title, 0, 45 ); ?> ...
 				<?php else : ?>

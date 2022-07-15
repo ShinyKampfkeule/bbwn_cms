@@ -9,6 +9,7 @@
     text-decoration: none;
     cursor: pointer;
     color: var(--accent-700);
+    font-size: var(--fs-head-400);
 
     &::after {
       content: "";
@@ -17,7 +18,7 @@
       background-color: var(--accent-300);
       height: .3em;
       position: absolute;
-      top: 110%;
+      top: 1.25em;
       right: 50%;
       z-index: -1;
       transition: transform 400ms;
@@ -42,6 +43,7 @@
     text-decoration: none;
     cursor: pointer;
     color: var(--accent-700);
+    font-size: var(--fs-head-400);
 
     &::after {
       content: "";
@@ -50,7 +52,7 @@
       background-color: var(--accent-300);
       height: .3em;
       position: absolute;
-      top: 110%;
+      top: 1.25em;
       right: 75%;
       z-index: -1;
       transition: transform 400ms;
@@ -87,7 +89,7 @@
     aspect-ratio: 2 / 1;
     display: grid;
     grid-template-columns: repeat( 3, calc( (100% - 2em) / 3 ) );
-    grid-template-rows: 4% repeat(2, calc( (96% - 2em) / 2 ));
+    grid-template-rows: 6% repeat(2, calc( (94% - 2em) / 2 ));
     column-gap: 1em;
     row-gap: 1em;
     position: relative;

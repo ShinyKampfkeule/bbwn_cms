@@ -9,7 +9,7 @@
 
 defined('_JEXEC') or die;
 ?>
-<h2 class="event__title grid-element-1-1 heading2"><?php echo $this -> event -> title ?></h2>
+<h2 class="event__title grid-element-1-1 heading-400"><?php echo $this -> event -> title ?></h2>
 <?php 
 $id = json_decode( $this -> event -> jcfields[11] -> rawvalue ) -> itemId;
 $name = json_decode( $this -> event -> jcfields[11] -> rawvalue ) -> filename;

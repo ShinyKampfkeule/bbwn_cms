@@ -31,6 +31,7 @@
 }
 
 .news {
+
     &__carousel {
 
         color: var(--accent-100);
@@ -60,10 +61,19 @@
             }
 
 
-            &__heading {
+            &__heading__big {
+                font-size: var(--fs-text-300);
+            }
+
+            &__heading__small {
+                font-size: calc( var(--fs-text-300) - .2em);
+            }
+
+            &__heading__small,
+            &__heading__big {
                 background-color: var(--accent-800-trans-750);
                 width: inherit;
-                height: 10%;
+                height: var(--heading-height);
                 padding-left: .4em;
                 display: flex;
                 align-items: center;

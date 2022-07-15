@@ -1,12 +1,12 @@
 .top-left-logo {
     background-color: var(--main-800);
     height: 100%;
+    align-items: center;
+    justify-content: center;
 
     &__svg {
         position: relative;
-        top: 0.5rem;
-        width: 15em;
-        left: 1em;
+        width: 80%;
     }
 }
 

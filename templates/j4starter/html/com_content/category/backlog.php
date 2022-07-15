@@ -18,7 +18,7 @@
                     <?php $bild = "images/placeholder/gelände.png"; ?>
                 <?php endif; ?>
                 <div class="own-carousel__content">
-                    <h2 class="own-carousel__heading heading2"><?php echo( $item -> title ) ?></h2>
+                    <h2 class="own-carousel__heading heading-400"><?php echo( $item -> title ) ?></h2>
                     <picture class="own-carousel__picture">
                         <img class="own-carousel__image" src="<?php echo $bild ?>" />
                     </picture>

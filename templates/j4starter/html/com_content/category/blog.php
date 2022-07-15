@@ -37,7 +37,7 @@ $counter = 1;
 
 ?>
 
-<h1 class="blog-content__header heading1"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
+<h1 class="blog-content__header heading-800"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 <section class="blog-content__test">
 	<section class="blog-content__leading blog-content__bc"></section>
 </section>

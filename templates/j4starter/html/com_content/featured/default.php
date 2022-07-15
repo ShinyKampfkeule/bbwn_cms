@@ -32,8 +32,8 @@ $this -> news_2 = FALSE;
 
 <section class="featured-content__content">
 	<section class="featured-content__news-grid">
-		<a href="/index.php?option=com_content&view=category&id=8&Itemid=102" class="featured-content__news heading-800 grid-element-1-1">Neuigkeiten</a>	
-		<a href="/index.php?option=com_content&view=category&id=9&Itemid=103" class="featured-content__upc-events heading-800 grid-element-1-3">Nächste Veranstaltung</a>
+		<a href="/index.php?option=com_content&view=category&id=8&Itemid=102" class="featured-content__news grid-element-1-1">Neuigkeiten</a>	
+		<a href="/index.php?option=com_content&view=category&id=9&Itemid=103" class="featured-content__upc-events grid-element-1-3">Nächste Veranstaltung</a>
 		<section class="grid-element-2-1_2"> 
 			<?php echo $this -> loadTemplate("own-carousel"); ?>
 		</section>

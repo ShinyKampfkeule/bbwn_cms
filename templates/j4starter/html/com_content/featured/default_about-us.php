@@ -23,25 +23,25 @@ defined('_JEXEC') or die;
     <p class="grid-element-1-2 text-200 about-us__text">
         <?php echo $this -> about -> jcfields[2] -> rawvalue;  ?>
     </p>
-    <div class="grid-element-1-3 about-us__facts">
+    <!-- <div class="grid-element-1-3 about-us__facts">
         <span class="heading-800 grid-element-1-1_2 about-us__keyhead">
             Unsere Keyfacts
         </span>
-        <span class="heading2 about-us__fact grid-element-2-1">
+        <span class="heading-400 about-us__fact grid-element-2-1">
             ca. 750 Mitarbeitende
         </span>
-        <span class="heading2 about-us__fact grid-element-2-2">
+        <span class="heading-400 about-us__fact grid-element-2-2">
             ca. 900 Teilnehmende
         </span>
-        <span class="heading2 about-us__fact grid-element-3-1">
+        <span class="heading-400 about-us__fact grid-element-3-1">
             120 Außenwohngruppen
         </span>
-        <span class="heading2 about-us__fact grid-element-3-2">
+        <span class="heading-400 about-us__fact grid-element-3-2">
             200 Teilnehmende in Internaten
         </span>
         <span class="heading-800 about-us__fact grid-element-4-1_2">
             über 40 Ausbildungsberufe
         </span>
-    </div>
+    </div> -->
 </section>
 <iframe class="about-us__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6176.805787530712!2d8.798649029095495!3d49.389482726308636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797ebb7568021d1%3A0x437c258b6294c4ee!2sSRH%20Berufsbildungswerk%20Neckargem%C3%BCnd!5e0!3m2!1sde!2sde!4v1657368146701!5m2!1sde!2sde"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

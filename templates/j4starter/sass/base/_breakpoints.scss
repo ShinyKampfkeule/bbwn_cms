@@ -1,51 +1,48 @@
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 576px) {
     :root {
-        --top-left-logo: 2em;
+        --fs-head-400: .8em;
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) {
     :root {
-        --top-left-logo: 4em;
+        --fs-head-400: 1em;
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     :root {
-        --top-left-logo: 6em;
+        --fs-head-400: 1.1em;
+        --fs-text-300: .6em;
     }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
     :root {
-        --top-left-logo: 8em;
+        --fs-head-400: 1.3em;
+        --fs-text-300: .9em;
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
     :root {
-        --top-left-logo: 10em;
+        --fs-head-400: 1.5em;
+        --fs-text-300: 1em;
     }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1400px) and (max-width: 1650px) {
+    
     :root {
-        --top-left-logo: 10em;
-        --news-container-heading-fs: var(--font-size-100);
-        --news-container-text-fs: var(--font-size-80);
-        --own-carousel-heading-fs: var(--font-size-80);
-        --own-carousel-text-fs: var(--font-size-80);
-        --event-heading-fs: var(--font-size-130);
+        --fs-head-400: 1.7em;
+        --fs-text-300: 1.2em;
+        --heading-height: 15%;
     }
 }
 
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 1651px) {
+    
     :root {
-        --top-left-logo: 12em;
-        --news-container-heading-fs: var(--font-size-120);
-        --news-container-text-fs: var(--font-size-100);
-        --own-carousel-heading-fs: var(--font-size-100);
-        --own-carousel-text-fs: var(--font-size-100);
-        --event-heading-fs: var(--font-size-160);
+        --fs-head-400: 1.7em;
     }
 }
