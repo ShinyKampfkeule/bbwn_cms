@@ -37,10 +37,10 @@ $counter = 1;
 
 ?>
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
-  <div class="carousel-inner full-height">
+<div id="carouselExampleSlidesOnly" class="carousel slide bigscreen" data-bs-ride="carousel" data-bs-interval="5000">
+  <div class="carousel-inner height-100">
 	<?php foreach ( $this -> items as $key => $article ) : ?>
-		<div class="carousel-item <?php if ( $firstElement === FALSE ) : ?><?php echo "active" ?><?php endif; ?> full-height">
+		<div class="carousel-item <?php if ( $firstElement === FALSE ) : ?><?php echo "active" ?><?php endif; ?> height-100">
 			<?php $layout = $article -> jcfields[19] -> rawvalue[0] ?>
 			<?php include "bigscreen_$layout.php" ?>
 		</div>

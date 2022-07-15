@@ -17,5 +17,4 @@ use Joomla\CMS\Layout\LayoutHelper;
 $this->subtemplatename = 'articles';
 echo LayoutHelper::render('joomla.content.category_default', $this);
 ?>
-
 </div>

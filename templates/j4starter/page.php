@@ -7,7 +7,7 @@
     </section>
     <section class="grid-element-1-2_3 rest-top">
     </section>
-    <section class="grid-element-2_3-1 sidebar-menu heading2">
+    <section class="grid-element-2_3-1 sidebar-menu heading-400">
         <jdoc:include type="modules" name="own_menu" style="none" />
     </section>
     <main class="grid-element-2_3-2_3 blog-content">
