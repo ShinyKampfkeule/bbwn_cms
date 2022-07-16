@@ -25,51 +25,18 @@ use Joomla\Component\Content\Site\Helper\RouteHelper;
 $wa = $this->document->getWebAssetManager();
 $wa->useScript('com_content.articles-list');
 
-// Create some shortcuts.
+$catList = array();
 $n          = count($this->items);
-$listOrder  = $this->escape($this->state->get('list.ordering'));
-$listDirn   = $this->escape($this->state->get('list.direction'));
-$langFilter = false;
+$ranNumber = rand(0, $n - 1);
 
-// Tags filtering based on language filter
-if (($this->params->get('filter_field') === 'tag') && (Multilanguage::isEnabled()))
-{
-	$tagfilter = ComponentHelper::getParams('com_tags')->get('tag_list_language_filter');
-
-	switch ($tagfilter)
-	{
-		case 'current_language':
-			$langFilter = Factory::getApplication()->getLanguage()->getTag();
-			break;
-
-		case 'all':
-			$langFilter = false;
-			break;
-
-		default:
-			$langFilter = $tagfilter;
+foreach ( $this -> items as $key => $article ) {
+	$category = array($article -> category_alias, $article -> category_title);
+	if (in_array($category, $catList)) {
+	} else {
+		array_push($catList, $category);
 	}
 }
-
-// Check for at least one editable article
-$isEditable = false;
-
-if (!empty($this->items))
-{
-	foreach ($this->items as $article)
-	{
-		if ($article->params->get('access-edit'))
-		{
-			$isEditable = true;
-			break;
-		}
-	}
-}
-
-$currentDate = Factory::getDate()->format('Y-m-d H:i:s');
-$ranNumber = rand(0, $n - 1)
 ?>
-
 <h1 class="article-list__header"><?php echo $this -> escape( $this -> params -> get ( 'page_heading' ) ) ; ?></h1>
 <section class="article-list__top-article">
 	<?php 
@@ -102,31 +69,28 @@ $ranNumber = rand(0, $n - 1)
 		</p>
 	</section>
 </section>
-<h2 class="article-list__heading">Alle Neuigkeiten</h2>
-<section class="flex article-list__list">
-	<?php foreach ( $this -> items as $key => $article ) : ?>
-		<?php if ( json_decode ( $article -> jcfields[4] -> rawvalue ) -> filename !== "" ): ?>
-			<?php 
-				$id = json_decode( $article -> jcfields[4] -> rawvalue ) -> itemId;
-				$name = json_decode( $article -> jcfields[4] -> rawvalue ) -> filename;
-				$bild = "images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
-			?>
-		<?php else: ?>
-			<?php 
-				$bild = "images/placeholder/1575466871112.jfif";
-			?>
-		<?php endif; ?>
-		<section class="article-list__small-article">
-			<picture class="article-list__small-article__image">
-				<img src="<?php echo $bild ?>" />
-			</picture>
-			<h2 class="heading-400 article-list__small-article__heading">
-				<?php if ( strlen ( $article -> title ) > 45 ) : ?>
-					<?php echo substr ( $article -> title, 0, 45 ); ?> ...
-				<?php else : ?>
-					<?php echo $article -> title ?>
-				<?php endif ?>
-			</h2>
-		</section>
-	<?php endforeach; ?>
+<section class="article-list__nav__container">
+	<ul class="article-list__nav nav" id="myTab" role="tablist">
+		<li class="nav-item" role="presentation">
+			<button class="nav-link active article-list__nav__link" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">Alle</button>
+		</li>
+		<?php foreach ($catList as $catKey => $catEntry) : ?>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link article-list__nav__link" id="<?php echo $catEntry[0] ?>-tab" data-bs-toggle="tab" data-bs-target="#<?php echo $catEntry[0] ?>" type="button" role="tab" aria-controls="<?php echo $catEntry[0] ?>" aria-selected="false"><?php echo $catEntry[1] ?></button>
+			</li>	
+		<?php endforeach; ?>
+	</ul>
 </section>
+<div class="tab-content" id="myTabContent">
+	<div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+		<?php 
+			$catEntry = array("alle", "Alle");
+			include "default_news-container.php"; 
+		?>
+	</div>
+	<?php foreach ($catList as $catKey => $catEntry) : ?>
+		<div class="tab-pane fade show" id="<?php echo $catEntry[0]?>" role="tabpanel" aria-labelledby="<?php echo $catEntry[0] ?>-tab">
+			<?php include "default_news-container.php" ?>
+		</div>
+	<?php endforeach; ?>
+</div>

@@ -29,5 +29,9 @@
         text-decoration: none;
         padding-left: .5em;
         width: 100%;
+
+        &:focus {
+            text-decoration: none;
+        }
     }
 }

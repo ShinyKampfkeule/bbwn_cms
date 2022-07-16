@@ -11,10 +11,8 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Layout\LayoutHelper;
 
+$categoryPath = $this -> category -> path
 ?>
 <div class="com-content-category category-list">
-<?php
-$this->subtemplatename = 'articles';
-echo LayoutHelper::render('joomla.content.category_default', $this);
-?>
+    <?php include "default_{$categoryPath}.php" ?>
 </div>
