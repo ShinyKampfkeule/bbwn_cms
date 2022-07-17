@@ -23,10 +23,20 @@ if ($tagId = $params->get('tag_id', ''))
 	$id = ' id="' . $tagId . '"';
 }
 
+$menutype = $list[0]->menutype;
+
+if ($menutype === "profile-menu") {
+	$listClass = " profile-menu__list";
+	$tabClass = " profile-menu__tab";
+} else {
+	$listClass = " main-menu__list";
+	$tabClass = "";
+}
+
 // The menu class is deprecated. Use mod-menu instead
 ?>
 
-<ul<?php echo $id; ?> class="mod-menu mod-list nav <?php echo $class_sfx; ?>">
+<ul<?php echo $id; ?> class="mod-menu mod-list nav <?php echo $class_sfx, $listClass; ?>">
 <?php foreach ($list as $i => &$item)
 {
 	$itemParams = $item->getParams();
@@ -75,7 +85,7 @@ if ($tagId = $params->get('tag_id', ''))
 		$class .= ' parent';
 	}
 
-	echo '<li class="' . $class . '">';
+	echo '<li class="' . $class . $tabClass . '">';
 
 	switch ($item->type) :
 		case 'separator':

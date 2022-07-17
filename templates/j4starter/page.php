@@ -6,6 +6,7 @@
             </svg>
     </section>
     <section class="grid-element-1-2_3 rest-top">
+        <?php include "login.php" ?>
     </section>
     <section class="grid-element-2_3-1 sidebar-menu">
         <jdoc:include type="modules" name="own_menu" style="none" />

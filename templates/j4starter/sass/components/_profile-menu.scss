@@ -1,0 +1,39 @@
+.profile-menu {
+
+    padding: 0 !important;
+    height: 100%;
+    z-index: 10;
+
+    &__tab {
+
+        &:hover {
+            .mod-menu__sub {
+                display: block;
+            }
+        }
+    }
+
+    a {
+        color: var(--accent-100);
+        text-decoration: none;
+    }
+
+    &__collapsable {
+        justify-content: end;
+        margin-right: 2em;
+        font-size: var(--fs-text-300);
+    }
+
+    &__list {
+        
+        .mod-menu__sub {
+            display: none;
+            background-color: var(--main-800);
+            position: absolute;
+            width: 7.5em;
+            padding-top: .2em;
+            padding-left: .5em;
+            padding-bottom: .2em;
+        }
+    }
+}

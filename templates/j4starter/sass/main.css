@@ -334,29 +334,29 @@ iframe {
   font-size: var(--fs-text-300);
 }
 
-.mod-menu {
+.main-menu__list {
   display: block;
   grid-column: 1;
   grid-row-start: 2;
   grid-row-end: 4;
 }
-.mod-menu :hover {
+.main-menu__list :hover {
   background-color: var(--accent-300);
 }
-.mod-menu .active {
+.main-menu__list .active {
   background-color: var(--accent-300);
 }
-.mod-menu .nav-item {
+.main-menu__list .nav-item {
   margin-top: 0.25em;
   height: 1.5em;
 }
-.mod-menu a {
+.main-menu__list a {
   color: var(--accent-100);
   text-decoration: none;
   padding-left: 0.5em;
   width: 100%;
 }
-.mod-menu a:focus {
+.main-menu__list a:focus {
   text-decoration: none;
 }
 
@@ -1279,4 +1279,31 @@ iframe {
 .card-body {
   background-color: var(--main-800);
   color: white;
+}
+
+.profile-menu {
+  padding: 0 !important;
+  height: 100%;
+  z-index: 10;
+}
+.profile-menu__tab:hover .mod-menu__sub {
+  display: block;
+}
+.profile-menu a {
+  color: var(--accent-100);
+  text-decoration: none;
+}
+.profile-menu__collapsable {
+  justify-content: end;
+  margin-right: 2em;
+  font-size: var(--fs-text-300);
+}
+.profile-menu__list .mod-menu__sub {
+  display: none;
+  background-color: var(--main-800);
+  position: absolute;
+  width: 7.5em;
+  padding-top: 0.2em;
+  padding-left: 0.5em;
+  padding-bottom: 0.2em;
 }/*# sourceMappingURL=main.css.map */
