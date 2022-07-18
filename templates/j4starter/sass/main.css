@@ -778,6 +778,7 @@ iframe {
   left: 0;
   width: inherit;
   height: inherit;
+  cursor: pointer;
 }
 .news__carousel__content:hover .news__carousel__content__popup,
 .news__carousel__content:hover .news__carousel__content__popup__text {
@@ -842,6 +843,7 @@ iframe {
   grid-template-columns: 100%;
   grid-template-rows: 100%;
   color: var(--accent-100);
+  cursor: pointer;
 }
 .event__title {
   width: 100%;
@@ -897,6 +899,7 @@ iframe {
   grid-template-columns: 100%;
   grid-template-rows: 100%;
   color: var(--accent-100);
+  cursor: pointer;
 }
 .news-container:hover .news-container__popup {
   display: block;
@@ -1084,6 +1087,7 @@ iframe {
   margin-left: auto;
   margin-right: auto;
   aspect-ratio: 2/1;
+  cursor: pointer;
 }
 .article-list__top-article:hover img {
   transform: scale(1.1);
@@ -1118,6 +1122,7 @@ iframe {
   width: 32%;
   position: relative;
   margin-bottom: 2em;
+  cursor: pointer;
 }
 .article-list__small-article:hover img {
   transform: scale(1.1);
