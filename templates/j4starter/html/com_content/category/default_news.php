@@ -37,6 +37,7 @@ foreach ( $this -> items as $key => $article ) {
 	}
 }
 ?>
+<?php dump($this -> items [4]) ?>
 <h1 class="article-list__header"><?php echo $this -> escape( $this -> params -> get ( 'page_heading' ) ) ; ?></h1>
 <section class="article-list__top-article">
 	<?php 
