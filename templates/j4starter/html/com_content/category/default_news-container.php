@@ -12,13 +12,9 @@
                     $bild = "images/placeholder/1575466871112.jfif";
                 ?>
             <?php endif; ?>
-            <?php 
-                $url_name = $_SERVER['SERVER_NAME']; 
-                if ( $url_name !== "localhost" ) {
-                $url_name = "{$url_name}/kevin";
-                }
+            <?php
                 $url_id = $article -> id;
-                $chl = urlencode("index.php?option=com_content&view=article&id={$url_id}");
+                $chl = "index.php?option=com_content&view=article&id={$url_id}";
             ?>
             <section class="article-list__small-article" onClick="location.href='<?php echo $chl ?>'">
                 <picture class="article-list__small-article__image">

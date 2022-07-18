@@ -28,13 +28,15 @@
             <?php 
                 $id = json_decode( $item -> jcfields[4] -> rawvalue ) -> itemId;
                 $name = json_decode( $item -> jcfields[4] -> rawvalue ) -> filename;
+                $url_id = $item -> id;
+	            $chl = "index.php?option=com_content&view=article&id={$url_id}";
             ?>
             <?php if ($name !== "") : ?>
                     <?php $bild = "images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg"; ?>
                 <?php else : ?>
                     <?php $bild = "images/placeholder/gelände.png"; ?>
                 <?php endif; ?>
-            <div class="carousel-item<?php if ( $firstElement === FALSE ) : ?><?php echo " active" ?><?php endif; ?>">
+            <div class="carousel-item<?php if ( $firstElement === FALSE ) : ?><?php echo " active" ?><?php endif; ?>" onClick="location.href='<?php echo $chl ?>'">
                 <img class="news__carousel__bgimg" src="<?php echo $bild ?>" alt="Slide <?php echo $counter ?>">
                 <div class="news__carousel__content">
                     <h2 class="<?php echo( strlen( $item -> title ) <= 60 ) ? 'news__carousel__content__heading__big' : 'news__carousel__content__heading__small' ?>"><?php echo $item -> title ?></h2>

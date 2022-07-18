@@ -37,6 +37,7 @@ $counter = 1;
 
 ?>
 
+<?php dump($this) ?>
 <div id="carouselExampleSlidesOnly" class="carousel slide bigscreen" data-bs-ride="carousel" data-bs-interval="5000">
   <div class="carousel-inner height-100">
 	<?php foreach ( $this -> items as $key => $article ) : ?>

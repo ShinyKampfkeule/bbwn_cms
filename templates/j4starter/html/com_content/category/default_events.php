@@ -42,9 +42,9 @@ $currentDate = Factory::getDate()->format('Y-m-d H:i:s');
 		$text = $event -> jcfields[3] -> rawvalue;
 		$place = $event -> jcfields[9] -> rawvalue;
 		$page = $event -> jcfields[10] -> rawvalue;
-		$img_id = json_decode($event -> jcfields[20] -> rawvalue) -> itemId;
-		$img_name = json_decode($event -> jcfields[20] -> rawvalue) -> filename;
-		$img_path = "images/econa/fields/20/com_content_article/{$img_id}/{$img_name}_L.jpg";
+		$img_id = json_decode($event -> jcfields[13] -> rawvalue) -> itemId;
+		$img_name = json_decode($event -> jcfields[13] -> rawvalue) -> filename;
+		$img_path = "images/econa/fields/13/com_content_article/{$img_id}/{$img_name}_L.jpg";
 	?>
 	<div class="card" style="width: 18rem;">
 	<img src="<?php echo $img_path ?>" class="card-img-top" alt="Event Bild">

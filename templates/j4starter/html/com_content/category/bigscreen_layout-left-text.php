@@ -5,9 +5,9 @@
     $url_name = "{$url_name}/kevin";
   }
 
-  $bgimg_id = json_decode($article->jcfields[15]->rawvalue)->itemId;
-  $bgimg_name = json_decode($article->jcfields[15]->rawvalue)->filename;
-  $bgimg = "images/econa/fields/15/com_content_article/{$bgimg_id}/{$bgimg_name}_L.jpg";
+  $bgimg_id = json_decode($article->jcfields[4]->rawvalue)->itemId;
+  $bgimg_name = json_decode($article->jcfields[4]->rawvalue)->filename;
+  $bgimg = "images/econa/fields/4/com_content_article/{$bgimg_id}/{$bgimg_name}_L.jpg";
   $phimg = "images/placeholder/1575466871112.jfif";
   $url_id = $article -> id;
   $cht = "qr";
@@ -27,6 +27,6 @@
   <img class="bigscreen__footer__qrcode" src="<?php echo $qrcode ?>" alt="QR Code">
 </section>
 <section class="flex bigscreen__info bigscreen__info__left">
-  <span class="bigscreen__info__article-text"><?php echo $article -> jcfields[18] -> rawvalue ?></span>
+  <span class="bigscreen__info__article-text"><?php echo $article -> jcfields[3] -> rawvalue ?></span>
   <span class="bigscreen__info__qrcode-text">Für mehr Informationen QR-Code scannen</span>
 </section>

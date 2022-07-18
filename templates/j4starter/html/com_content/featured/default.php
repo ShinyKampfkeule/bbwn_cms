@@ -29,6 +29,10 @@ $this -> news_2 = FALSE;
 		<?php $this -> about = $item ?>
 	<?php endif; ?>
 <?php endforeach; ?>
+<?php 
+	$url_id_event = $this -> event -> id;
+	$chl_event = "index.php?option=com_content&view=article&id={$url_id_event}";
+?>
 
 <section class="featured-content__content">
 	<section class="featured-content__news-grid">
@@ -37,8 +41,8 @@ $this -> news_2 = FALSE;
 		<section class="grid-element-2-1_2"> 
 			<?php echo $this -> loadTemplate("own-carousel"); ?>
 		</section>
-		<section class="grid-element-2_3-3 event">
-		<?php echo $this -> loadTemplate("event"); ?>
+		<section class="grid-element-2_3-3 event" onClick="location.href='<?php echo $chl_event ?>'">
+			<?php echo $this -> loadTemplate("event"); ?>
 		</section>
 		<?php echo $this -> loadTemplate("news-container"); ?>
 	</section>

@@ -1,48 +1,63 @@
 <?php
-/**
- * @package     Joomla.Site
- * @subpackage  com_content
- *
- * @copyright   (C) 2009 Open Source Matters, Inc. <https://www.joomla.org>
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
+	/**
+	 * @package     Joomla.Site
+	 * @subpackage  com_content
+	 *
+	 * @copyright   (C) 2009 Open Source Matters, Inc. <https://www.joomla.org>
+	 * @license     GNU General Public License version 2 or later; see LICENSE.txt
+	 */
 
-defined('_JEXEC') or die;
+	defined('_JEXEC') or die;
 
-use Joomla\CMS\Component\ComponentHelper;
-use Joomla\CMS\Factory;
-use Joomla\CMS\HTML\HTMLHelper;
-use Joomla\CMS\Language\Associations;
-use Joomla\CMS\Language\Multilanguage;
-use Joomla\CMS\Language\Text;
-use Joomla\CMS\Router\Route;
-use Joomla\CMS\Uri\Uri;
-use Joomla\Component\Content\Administrator\Extension\ContentComponent;
-use Joomla\Component\Content\Site\Helper\AssociationHelper;
-use Joomla\Component\Content\Site\Helper\RouteHelper;
+	use Joomla\CMS\Component\ComponentHelper;
+	use Joomla\CMS\Factory;
+	use Joomla\CMS\HTML\HTMLHelper;
+	use Joomla\CMS\Language\Associations;
+	use Joomla\CMS\Language\Multilanguage;
+	use Joomla\CMS\Language\Text;
+	use Joomla\CMS\Router\Route;
+	use Joomla\CMS\Uri\Uri;
+	use Joomla\Component\Content\Administrator\Extension\ContentComponent;
+	use Joomla\Component\Content\Site\Helper\AssociationHelper;
+	use Joomla\Component\Content\Site\Helper\RouteHelper;
 
-/** @var Joomla\CMS\WebAsset\WebAssetManager $wa */
-$wa = $this->document->getWebAssetManager();
-$wa->useScript('com_content.articles-list');
+	/** @var Joomla\CMS\WebAsset\WebAssetManager $wa */
+	$wa = $this->document->getWebAssetManager();
+	$wa->useScript('com_content.articles-list');
 
-$catList = array();
-$n          = count($this->items);
-$ranNumber = rand(0, $n - 1);
+	$catList = array();
+	$n          = count($this->items);
+	$ranNumber = rand(0, $n - 1);
 
-foreach ( $this -> items as $key => $article ) {
-	$category = array($article -> category_alias, $article -> category_title);
-	if (in_array($category, $catList)) {
-	} else {
-		array_push($catList, $category);
+	foreach ( $this -> items as $key => $article ) {
+		$category = array($article -> category_alias, $article -> category_title);
+		if (in_array($category, $catList)) {
+		} else {
+			array_push($catList, $category);
+		}
 	}
-}
+
+	$text_arr = explode("\r\n", $this -> items [4] -> jcfields[2] -> rawvalue);
+	$deleted = 0;
+
+	foreach ($text_arr as $key => $text) {
+		if ($text === "") {
+			array_splice($text_arr, $key - $deleted, 1);
+			$deleted++;
+		}
+	}
 ?>
-<?php dump($this -> items [4]) ?>
 <h1 class="article-list__header"><?php echo $this -> escape( $this -> params -> get ( 'page_heading' ) ) ; ?></h1>
-<section class="article-list__top-article">
-	<?php 
-		$bigArticle = $this -> items [ $ranNumber ];
-	?>
+<?php 
+	$bigArticle = $this -> items [ $ranNumber ];
+	$url_name = $_SERVER['SERVER_NAME']; 
+	if ( $url_name !== "localhost" ) {
+	$url_name = "{$url_name}/kevin";
+	}
+	$url_id = $bigArticle -> id;
+	$chl = "index.php?option=com_content&view=article&id={$url_id}";
+?>
+<section class="article-list__top-article" onClick="location.href='<?php echo $chl ?>'">
 	<?php if ( json_decode ( $bigArticle -> jcfields[4] -> rawvalue ) -> filename !== "" ): ?>
 		<?php 
 			$id = json_decode( $bigArticle -> jcfields[4] -> rawvalue ) -> itemId;

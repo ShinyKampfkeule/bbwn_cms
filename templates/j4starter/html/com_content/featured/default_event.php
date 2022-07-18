@@ -11,9 +11,9 @@ defined('_JEXEC') or die;
 ?>
 <h2 class="event__title grid-element-1-1 heading-400"><?php echo $this -> event -> title ?></h2>
 <?php 
-$id = json_decode( $this -> event -> jcfields[11] -> rawvalue ) -> itemId;
-$name = json_decode( $this -> event -> jcfields[11] -> rawvalue ) -> filename;
-$bild5 = "images/econa/fields/11/com_content_article/{$id}/{$name}_L.jpg";
+    $id = json_decode( $this -> event -> jcfields[11] -> rawvalue ) -> itemId;
+    $name = json_decode( $this -> event -> jcfields[11] -> rawvalue ) -> filename;
+    $bild5 = "images/econa/fields/11/com_content_article/{$id}/{$name}_L.jpg";
 ?>
 <picture class="event__picture grid-element-1-1">
 <img class="layout2__image"  src="<?php echo $bild5 ?>" />
