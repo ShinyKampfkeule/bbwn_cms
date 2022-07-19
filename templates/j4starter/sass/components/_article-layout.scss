@@ -1,0 +1,20 @@
+.article-layout {
+
+    flex-direction: column;
+
+    &__main-heading {
+        text-align: center;
+        font-size: var(--fs-head-800);
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+
+    &__infobox {
+        background-color: var(--accent-700-trans-750);
+    }
+
+    &__with-slider {
+
+        background-color: black;
+    }
+}

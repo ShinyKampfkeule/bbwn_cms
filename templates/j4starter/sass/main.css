@@ -1311,4 +1311,20 @@ iframe {
   padding-top: 0.2em;
   padding-left: 0.5em;
   padding-bottom: 0.2em;
+}
+
+.article-layout {
+  flex-direction: column;
+}
+.article-layout__main-heading {
+  text-align: center;
+  font-size: var(--fs-head-800);
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.article-layout__infobox {
+  background-color: var(--accent-700-trans-750);
+}
+.article-layout__with-slider {
+  background-color: black;
 }/*# sourceMappingURL=main.css.map */

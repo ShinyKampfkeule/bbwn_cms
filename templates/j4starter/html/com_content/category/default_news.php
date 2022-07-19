@@ -36,16 +36,6 @@
 			array_push($catList, $category);
 		}
 	}
-
-	$text_arr = explode("\r\n", $this -> items [4] -> jcfields[2] -> rawvalue);
-	$deleted = 0;
-
-	foreach ($text_arr as $key => $text) {
-		if ($text === "") {
-			array_splice($text_arr, $key - $deleted, 1);
-			$deleted++;
-		}
-	}
 ?>
 <h1 class="article-list__header"><?php echo $this -> escape( $this -> params -> get ( 'page_heading' ) ) ; ?></h1>
 <?php 
