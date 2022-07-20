@@ -12,6 +12,14 @@
         background-color: var(--accent-800-trans-750);
         display: flex;
         align-items: center;
+
+        &__big {
+            font-size: var(--fs-text-300);
+        }
+
+        &__small {
+            font-size: calc( var(--fs-text-300) - .2em);
+        }
     }
 
     &__picture {

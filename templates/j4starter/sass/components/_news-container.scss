@@ -49,6 +49,14 @@
         padding-left: .4em;
         display: flex;
         align-items: center;
+
+        &__small {
+            font-size: var(--fs-text-200);
+        }
+
+        &__big {
+            font-size: var(--fs-text-300);
+        }
     }
 
     &__popup {

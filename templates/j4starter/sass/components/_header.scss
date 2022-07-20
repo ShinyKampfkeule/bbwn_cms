@@ -2,11 +2,12 @@
     background-color: var(--main-800);
     height: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 
     &__svg {
         position: relative;
-        width: 80%;
+        width: var(--logo-width);
+        margin-left: 1em;
     }
 }
 
