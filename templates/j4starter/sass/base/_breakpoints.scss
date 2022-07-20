@@ -40,9 +40,10 @@
     }
 }
 
-@media only screen and (min-width: 1651px) {
+@media only screen and (min-width: 1651px) and (max-width: 2500px) {
     
     :root {
         --fs-head-400: 2em;
+        --logo-width: 75%;
     }
 }
