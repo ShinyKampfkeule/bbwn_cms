@@ -12,6 +12,14 @@
 	$this -> news_arr = [];
 	$this -> news_1 = FALSE;
 	$this -> news_2 = FALSE;
+
+	$url_name = $_SERVER['SERVER_NAME']; 
+
+	if ( $url_name !== "localhost" ) {
+		$url_name = "{$url_name}/kevin";
+	} else {
+		$url_name = "";
+	}
 ?>
 <?php foreach ($this->lead_items as &$item) : ?>
 	<?php if ($item->category_alias === 'news') : ?>
@@ -35,8 +43,8 @@
 
 <section class="featured-content__content">
 	<section class="featured-content__news-grid">
-		<a href="/index.php?option=com_content&view=category&id=8&Itemid=102" class="featured-content__news">Neuigkeiten</a>	
-		<a href="/index.php?option=com_content&view=category&id=9&Itemid=103" class="featured-content__upc-events">Nächste Veranstaltung</a>
+		<a href="<?php echo $url_name ?>/index.php?option=com_content&view=category&id=8&Itemid=102" class="featured-content__news">Neuigkeiten</a>	
+		<a href="<?php echo $url_name ?>/index.php?option=com_content&view=category&id=9&Itemid=103" class="featured-content__upc-events">Nächste Veranstaltung</a>
 		<section class="grid-element-2-1_2"> 
 			<?php echo $this -> loadTemplate("own-carousel"); ?>
 		</section>
