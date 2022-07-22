@@ -1,6 +1,7 @@
 :root {
     --main-800-trans-750: rgba(0, 22, 36, .75);
     --main-800: rgb(0, 22, 36);
+    --main-400-trans-900: rgba(223, 72, 7, .9);
     --main-400-trans-750: rgba(223, 72, 7, .75);
     --main-400: rgb(223, 72, 7);
     --accent-800-trans-750: rgba(0, 0, 0, .75);
@@ -13,10 +14,14 @@
     --accent-100: rgb(255, 255, 255);
 
     --fs-head-800: 4em;
+    --fs-head-600: 3em;
     --fs-head-400: 2em;
     --fs-text-300: 1.5em;
-    --fs-text-200: 1em;
+    --fs-text-200: 1.3em;
     --fs-text-100: .8em;
+
+    --grid-gap-100: 1em;
+    --grid-gap-50: .5em;
 
 
     --fs-2000: 8em;
@@ -35,5 +40,6 @@
     --blur: 4px;
     --footer-text-pos: 10em;
     --heading-height: 15%;
-    --logo-width: 80%
+    --logo-width: 80%;
+    --featured-content__news-grid__row-height: 2.5em;
 }

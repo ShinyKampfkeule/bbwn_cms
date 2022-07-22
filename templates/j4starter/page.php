@@ -8,10 +8,51 @@
     <section class="grid-element-1-2_3 rest-top">
         <?php include "login.php" ?>
     </section>
-    <section class="grid-element-2_3-1 sidebar-menu">
-        <jdoc:include type="modules" name="own_menu" style="none" />
+    <section class="sidebar" id="sidebar">
+        <div id="menu-toggler" class="sidebar__menu__toggler flex" onClick="toggleNavBar()"><p id="menu-toggler-text" class="sidebar__menu__toggler__text">></p></div>
+        <div id="sidebar-menu" class="sidebar__menu">
+            <jdoc:include type="modules" name="own_menu" style="none" />
+        </div>
     </section>
-    <main class="grid-element-2_3-2_3 blog-content">
+    <main class="grid-element-2_3-2_3 blog-content" id="blog-content">
         <jdoc:include type="component" />
     </main>
 </body>
+<script>
+    function toggleNavBar() {
+        let sidebar = document.getElementsByClassName('sidebar')[0];
+        let sidebarMenu = document.getElementsByClassName('sidebar__menu')[0];
+        let toggler = document.getElementById('menu-toggler');
+        let togglerText = document.getElementById('menu-toggler-text');
+        let blogContent = document.getElementById('blog-content');
+        let view = window.innerWidth;
+        console.log(toggler.style);
+        if (sidebarMenu.style.display === 'none') {
+            sidebarMenu.style.display = 'block';
+            toggler.style.left = '100%';
+            togglerText.innerHTML = '<';
+            if (view >= 1200) {
+                blogContent.style.gridColumn = '2 / span 2';
+            } else {
+                sidebar.style.gridColumn = '1 / span 2';
+                sidebar.style.zIndex = '10';
+                sidebarMenu.style.backgroundColor = 'var(--main-400-trans-900)'
+            }
+        } else {
+            sidebarMenu.style.display = 'none';
+            toggler.style.left = '0';
+            togglerText.innerHTML = '>';
+            blogContent.style.gridColumn = '1 / span 3';
+        }
+    }
+    let view = window.innerWidth;
+    if (view >= 1200) {
+        let sidebarMenu = document.getElementsByClassName('sidebar__menu')[0];
+        let toggler = document.getElementById('menu-toggler');
+        let togglerText = document.getElementById('menu-toggler-text');
+        let blogContent = document.getElementById('blog-content');
+        sidebarMenu.style.display = 'block';
+        toggler.style.display = 'none';
+        blogContent.style.gridColumn = '2 / span 2';
+    }
+</script>

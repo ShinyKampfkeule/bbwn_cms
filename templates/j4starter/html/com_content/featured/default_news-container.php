@@ -23,7 +23,7 @@
         $bild6 = "images/econa/fields/13/com_content_article/{$id}/{$name}_L.jpg";
         
     ?>
-    <h2 class="news-container__heading grid-element-1-1 <?php echo( strlen( $this -> news_1 -> title ) <= 40 ) ? 'news-container__heading__big' : 'news-container__heading__small' ?>"><?php echo substr( $this -> news_1 -> title, 0, 50 ); ?></h2>
+    <h2 class="news-container__heading grid-element-1-1 <?php echo( strlen( $this -> news_1 -> title ) <= 50 ) ? 'news-container__heading__big' : 'news-container__heading__small' ?>"><?php echo substr( $this -> news_1 -> title, 0, 50 ); ?></h2>
     <?php if ( $videoId !== "" ) : ?>
         <iframe class="news-container__video grid-element-1-1" src="<?php echo $videoLink ?>"></iframe>
     <?php else : ?>
@@ -43,7 +43,7 @@
         $name = json_decode( $this -> news_2 -> jcfields[4] -> rawvalue ) -> filename;
         $bild7 = "images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
     ?>
-    <h2 class="news-container__heading grid-element-1-1 <?php echo( strlen( $this -> news_1 -> title ) <= 40 ) ? 'news-container__heading__big' : 'news-container__heading__small' ?>"><?php echo substr( $this -> news_2 -> title, 0, 50 ); ?></h2>
+    <h2 class="news-container__heading grid-element-1-1 <?php echo( strlen( $this -> news_2 -> title ) <= 40 ) ? 'news-container__heading__big' : 'news-container__heading__small' ?>"><?php echo substr( $this -> news_2 -> title, 0, 50 ); ?></h2>
     <picture class="news-container__picture grid-element-1-1">
         <img class="news-container__image"  src="<?php echo $bild7 ?>" />
     </picture>

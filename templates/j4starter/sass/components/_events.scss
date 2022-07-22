@@ -1,9 +1,37 @@
-.card {
-    border-radius: 10px;
-    overflow: hidden;
-}
+.event-cards {
 
-.card-body {
-    background-color: var(--main-800);
-    color: white;
+    width: 80%;
+    column-gap: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6em;
+
+    &__header {
+        width: 87%;
+        height: 1.8em;
+        position: fixed;
+        background-color: var(--accent-100);
+        z-index: 5;
+        padding-top: .2em;
+        padding-left: .4em;
+    }
+
+    .card {
+        border-radius: 10px;
+        overflow: hidden;
+        width: 24em !important;
+
+        &-img-top {
+            max-height: 12em;
+        }
+
+        &-body {
+            background-color: var(--main-800);
+            color: white;
+        }
+
+        &-title {
+            margin-bottom: 1em;
+        }
+    }
 }

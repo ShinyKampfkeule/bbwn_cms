@@ -43,13 +43,15 @@
 	} else {
 		$main_img_src = "images/placeholder/1575466871112.jfif";
 	}
-	
-	$text_arr     = explode("\r\n", $item -> jcfields[2] -> rawvalue);
+
+	$text_arr     = explode("\r\n\r\n", $item -> jcfields[2] -> rawvalue);
 	$heading_arr     = explode("\r\n", $item -> jcfields[22] -> rawvalue);
 	$deleted_text = 0;
 	$deleted_heading = 0;
 	$slider_field_arr = [23, 24, 25, 26, 27];
 	$slider_image_url_arr = [];
+	$videoId = $item -> jcfields[5] -> rawvalue;
+	$videoLink = "https://www.youtube.com/embed/{$videoId}";
 
 
 	foreach ($slider_field_arr as $key) {
@@ -61,12 +63,13 @@
 			array_push($slider_image_url_arr, $img_url);
 		}
 	} 
-	
 
 	foreach ($text_arr as $key => $text) {
 		if ($text === "") {
 			array_splice($text_arr, $key - $deleted_text, 1);
 			$deleted_text++;
+		} else {
+			$text_arr[$key] = str_replace('\r\n', '<br>', $text);
 		}
 	}
 
@@ -82,17 +85,15 @@
 	$currentDate       = Factory::getDate()->format('Y-m-d H:i:s');
 	$isNotPublishedYet = $this->item->publish_up > $currentDate;
 	$isExpired         = !is_null($this->item->publish_down) && $this->item->publish_down < $currentDate;
-
-
 ?>
 
 <section class="article-layout flex">
-	<h1 class="article-layout__main-heading"><?php echo $main_heading ?></h1>
-	<section class="article-layout__infobox">
-		<p>Kategorie: <?php echo $category ?></p>
-		<p>Autor: <?php echo $author ?></p>
-		<p>Erstellt am: <?php echo $created ?></p>
-		<p>Zuletzt bearbeitet am: <?php echo $last_edit ?></p>
-	</section>
+	<h1 class="article-layout__heading"><?php echo $main_heading ?></h1>
 	<?php include "default_{$layout}.php" ?>
+	<section class="article-layout__infobox">
+    <p>Kategorie: <?php echo $category ?></p>
+    <p>Autor: <?php echo $author ?></p>
+    <p>Erstellt am: <?php echo $created ?></p>
+    <p>Zuletzt bearbeitet am: <?php echo $last_edit ?></p>
+</section>
 </section>

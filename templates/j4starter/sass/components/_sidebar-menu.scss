@@ -1,8 +1,39 @@
-.sidebar-menu {
-    background-color: var(--main-400);
-    border-right: 2px solid var(--accent-600);
-    position: relative;
+.sidebar {
     font-size: var(--fs-text-300);
+    position: relative;
+    grid-column: 1;
+    grid-row: 2 / span 2;
+
+    &__menu {
+        background-color: var(--main-400);
+        border-right: 2px solid var(--accent-600);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+
+        &__toggler {
+            background-color: var(--main-800);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 15;
+            text-align: center;
+            color: var(--accent-100);
+            width: 1em;
+            height: 1em;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            p {
+                font-size: var(--fs-text-100);
+                padding-bottom: .3em;
+            }
+        }
+    }
 }
 
 .main-menu__list {

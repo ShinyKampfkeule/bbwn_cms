@@ -10,6 +10,8 @@
     cursor: pointer;
     color: var(--accent-700);
     font-size: var(--fs-head-400);
+    grid-column: 1 / span 2;
+    grid-row: 1;
 
     &::after {
       content: "";
@@ -44,6 +46,8 @@
     cursor: pointer;
     color: var(--accent-700);
     font-size: var(--fs-head-400);
+    grid-column: 3;
+    grid-row: 1;
 
     &::after {
       content: "";
@@ -86,12 +90,12 @@
 
   &__news-grid {
     width: 100%;
-    aspect-ratio: 2 / 1;
+    height: 55em;
     display: grid;
     grid-template-columns: repeat( 3, calc( (100% - 2em) / 3 ) );
-    grid-template-rows: 6% repeat(2, calc( (94% - 2em) / 2 ));
-    column-gap: 1em;
-    row-gap: 1em;
+    grid-template-rows: var(--featured-content__news-grid__row-height) repeat(2, calc( (100% - var(--featured-content__news-grid__row-height) - 2em) / 2 ));
+    column-gap: var(--grid-gap-100);
+    row-gap: var(--grid-gap-100);
     position: relative;
     left: 50%;
     transform: translateX(-50%);

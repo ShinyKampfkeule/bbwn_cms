@@ -1,12 +1,49 @@
 @media only screen and (max-width: 576px) {
     :root {
-        --fs-head-400: .8em;
+        --fs-head-400: .8em !important;
+        --featured-content__news-grid__row-height: 2em !important;
+        --fs-head-800: 1.5em;
+        --fs-text-300: .9em;
+        --fs-text-200: .8em;
+        
+    }
+
+    .featured-content {
+
+        &__news {
+            grid-column: 1 / span 2 !important;
+            font-size: var(--fs-head-800) !important;
+        }
+
+        &__upc-events {
+            grid-column: 1 !important;
+            grid-row: 4 !important;
+            font-size: var(--fs-head-800) !important;
+        }
+
+        &__news-grid {
+            column-gap: var(--grid-gap-50) !important;
+            row-gap: var(--grid-gap-50) !important;
+            grid-template-columns: repeat( 2, calc( ( 100% - var(--grid-gap-50) ) / 2 ) ) !important;
+            grid-template-rows: var(--featured-content__news-grid__row-height) repeat( 2, calc( ( 50% - var(--featured-content__news-grid__row-height) - var(--grid-gap-50) ) / 2 ) ) var(--featured-content__news-grid__row-height) 45% !important;
+            height: 40em !important;
+        }
+    }
+
+    .event {
+        grid-column: 1 !important;
+        grid-row: 5 !important;
+    }
+
+    .carousel-indicators {
+        margin-bottom: 0;
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     :root {
         --fs-head-400: 1em;
+        --featured-content__news-grid__row-height: .8em;
     }
 }
 
@@ -14,6 +51,7 @@
     :root {
         --fs-head-400: 1.1em;
         --fs-text-300: .6em;
+        --featured-content__news-grid__row-height: .9em;
     }
 }
 
@@ -21,6 +59,7 @@
     :root {
         --fs-head-400: 1.3em;
         --fs-text-300: .9em;
+        --featured-content__news-grid__row-height: 1.2em;
     }
 }
 
@@ -28,6 +67,7 @@
     :root {
         --fs-head-400: 1.5em;
         --fs-text-300: 1em;
+        --featured-content__news-grid__row-height: 1.5em;
     }
 }
 
@@ -45,5 +85,17 @@
     :root {
         --fs-head-400: 2em;
         --logo-width: 75%;
+    }
+
+    .featured-content {
+
+        &__news {
+            grid-column: 1 / span 2;
+        }
+
+        &__upc-events {
+            grid-column: 3;
+            grid-row: 1;
+        }
     }
 }

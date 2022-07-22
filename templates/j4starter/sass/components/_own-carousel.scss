@@ -48,19 +48,20 @@
             height: inherit;
             cursor: pointer;
 
-            &:hover {
+            @media all and (min-width: 922px) {
+                &:hover {
 
-                .news__carousel__content__popup,
-                .news__carousel__content__popup__text {
-                    display: block;
-                }
-
-                .news__carousel__content__heading {
-                    animation: shrink-heading 2s ease-out 0s 1 normal forwards;
-                    width: 70%;
+                    .news__carousel__content__popup,
+                    .news__carousel__content__popup__text {
+                        display: block;
+                    }
+    
+                    .news__carousel__content__heading {
+                        animation: shrink-heading 2s ease-out 0s 1 normal forwards;
+                        width: 70%;
+                    }
                 }
             }
-
 
             &__heading__big {
                 font-size: var(--fs-text-300);
