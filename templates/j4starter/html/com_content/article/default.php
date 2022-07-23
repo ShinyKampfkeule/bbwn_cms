@@ -52,7 +52,9 @@
 	$slider_image_url_arr = [];
 	$videoId = $item -> jcfields[5] -> rawvalue;
 	$videoLink = "https://www.youtube.com/embed/{$videoId}";
-
+	$img_rawvalue = json_decode( $jcfields[23] -> rawvalue );
+	$caption = $img_rawvalue -> caption;
+	$alt = $img_rawvalue -> alt;
 
 	foreach ($slider_field_arr as $key) {
 		$img = json_decode( $jcfields[$key] -> rawvalue );

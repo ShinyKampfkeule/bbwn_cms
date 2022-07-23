@@ -39,10 +39,12 @@ $counter = 1;
 <div id="carouselExampleSlidesOnly" class="carousel slide bigscreen" data-bs-ride="carousel" data-bs-interval="5000">
   <div class="carousel-inner height-100">
 	<?php foreach ( $this -> items as $key => $article ) : ?>
-		<div class="carousel-item <?php if ( $firstElement === FALSE ) : ?><?php echo "active" ?><?php endif; ?> height-100">
-			<?php $layout = $article -> jcfields[19] -> rawvalue[0] ?>
-			<?php include "bigscreen_$layout.php" ?>
-		</div>
+		<?php if ($key === 0) : ?>
+			<div class="carousel-item <?php if ( $firstElement === FALSE ) : ?><?php echo "active" ?><?php endif; ?> height-100">
+				<?php $layout = $article -> jcfields[19] -> rawvalue[0] ?>
+				<?php include "bigscreen_layout-new.php" ?>
+			</div>
+		<?php endif; ?>
 		<?php $firstElement = TRUE ?>
 	<?php endforeach; ?>
   </div>

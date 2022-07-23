@@ -56,3 +56,7 @@
         </button>
     </div>
 </section>
+<section class="article-layout__slider__addition">
+    <h2 class="article-layout__slider__addition__heading"><?php echo $caption ?></h2>
+    <p class="article-layout__slider__addition__text"><?php echo $alt ?></p>
+</section>

@@ -1,48 +1,24 @@
 .article-list {
 
-    &__header {
-        width: 87%;
-        height: 1.8em;
-        position: fixed;
-        background-color: var(--accent-100);
-        z-index: 5;
-        padding-top: .2em;
-        padding-left: .4em;
-    }
-
     &__nav {
-        justify-content: center;
-        font-size: var(--fs-head-400);
-        gap: .5em;
+        justify-content: end;
+        font-size: var(--fs-text-200);
+        width: 47%;
+        align-items: end;
+
+        &__header {           
+            padding-top: .2em;
+            padding-left: .4em;
+            padding-bottom: .4em;
+            width: 40%;
+        }
 
         &__container {
 
-            margin-top: 1em;
-            margin-bottom: 1em;
-
-            &::before {
-                content: "";
-                display: block;
-                width: 50%;
-                background-color: var(--accent-700);
-                height: .1em;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: .2em;
-                position: relative;
-            }
-    
-            &::after {
-                content: "";
-                display: block;
-                width: 50%;
-                background-color: var(--accent-700);
-                height: .1em;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: .2em;
-                position: relative;
-            }
+            background-color: var(--accent-100);
+            position: fixed;
+            z-index: 5;
+            width: 100%;
         }
 
         &__link {
@@ -79,12 +55,13 @@
     }
 
     &__top-article {
-        width: 50%;
+        width: 90%;
         position: relative;
         margin-left: auto;
         margin-right: auto;
         aspect-ratio: 2 / 1;
         cursor: pointer;
+        margin-bottom: 2em;
 
         &:hover {
 

@@ -37,7 +37,6 @@
 		}
 	}
 ?>
-<h1 class="article-list__header"><?php echo $this -> escape( $this -> params -> get ( 'page_heading' ) ) ; ?></h1>
 <?php 
 	$bigArticle = $this -> items [ $ranNumber ];
 	$url_name = $_SERVER['SERVER_NAME']; 
@@ -47,6 +46,19 @@
 	$url_id = $bigArticle -> id;
 	$chl = "index.php?option=com_content&view=article&id={$url_id}";
 ?>
+<section class="article-list__nav__container flex">
+	<h1 class="article-list__nav__header"><?php echo $this -> escape( $this -> params -> get ( 'page_heading' ) ) ; ?></h1>	
+	<ul class="article-list__nav nav" id="myTab" role="tablist">
+		<li class="nav-item" role="presentation">
+			<button class="nav-link active article-list__nav__link" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">Alle</button>
+		</li>
+		<?php foreach ($catList as $catKey => $catEntry) : ?>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link article-list__nav__link" id="<?php echo $catEntry[0] ?>-tab" data-bs-toggle="tab" data-bs-target="#<?php echo $catEntry[0] ?>" type="button" role="tab" aria-controls="<?php echo $catEntry[0] ?>" aria-selected="false"><?php echo $catEntry[1] ?></button>
+			</li>	
+		<?php endforeach; ?>
+	</ul>
+</section>
 <section class="article-list__top-article" onClick="location.href='<?php echo $chl ?>'">
 	<?php if ( json_decode ( $bigArticle -> jcfields[4] -> rawvalue ) -> filename !== "" ): ?>
 		<?php 
@@ -74,18 +86,6 @@
 			<?php endif ?>
 		</p>
 	</section>
-</section>
-<section class="article-list__nav__container">
-	<ul class="article-list__nav nav" id="myTab" role="tablist">
-		<li class="nav-item" role="presentation">
-			<button class="nav-link active article-list__nav__link" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">Alle</button>
-		</li>
-		<?php foreach ($catList as $catKey => $catEntry) : ?>
-			<li class="nav-item" role="presentation">
-				<button class="nav-link article-list__nav__link" id="<?php echo $catEntry[0] ?>-tab" data-bs-toggle="tab" data-bs-target="#<?php echo $catEntry[0] ?>" type="button" role="tab" aria-controls="<?php echo $catEntry[0] ?>" aria-selected="false"><?php echo $catEntry[1] ?></button>
-			</li>	
-		<?php endforeach; ?>
-	</ul>
 </section>
 <div class="tab-content" id="myTabContent">
 	<div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">

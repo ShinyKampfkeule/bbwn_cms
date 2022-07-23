@@ -9,7 +9,6 @@
         margin-top: 2em; 
         font-size: var(--fs-head-800);
         width: 100%;
-        text-align: center;
      }
 
      &__intro {
@@ -89,6 +88,7 @@
             &__text {
                 font-size: var(--fs-text-300);
                 margin-bottom: 2em;
+                width: 60%;
             }
 
             &__image {
@@ -96,8 +96,6 @@
                 margin-top: 5em;
                 margin-bottom: 5em;
                 position: relative;
-                margin-left: auto;
-                margin-right: auto;
             }
         }
 
@@ -110,11 +108,23 @@
     }
 
     &__slider {
-        width: 60%;
+        width: 70%;
         margin-bottom: 5em;
         position: relative;
-        margin-left: auto;
-        margin-right: auto;
+
+        &__addition {
+            width: calc(30% - 1em);
+            margin-left: 1em;
+
+            &__heading {
+                font-size: var(--fs-text-190);
+            }
+
+            &__text {
+                margin-top: 1em;
+                font-size: var(--fs-text-150);
+            }
+        }
     }
 
     &__infobox {
