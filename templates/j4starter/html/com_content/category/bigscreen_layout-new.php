@@ -28,8 +28,6 @@
 <section class="flex bigscreen__footer width-100">
   <h1 class="bigscreen__footer__heading <?php echo( strlen( $article -> title ) <= 25 ) ? 'heading-2000' : 'heading-1500' ?>"><?php echo $article -> title ?></h1>
   <img class="bigscreen__footer__qrcode" src="<?php echo $qrcode ?>" alt="QR Code">
-</section>
-<section class="flex bigscreen__info bigscreen__info__right">
   <span class="bigscreen__info__article-text"><?php echo $article -> jcfields[3] -> rawvalue ?></span>
   <span class="bigscreen__info__qrcode-text">Für mehr Informationen QR-Code scannen</span>
 </section>
