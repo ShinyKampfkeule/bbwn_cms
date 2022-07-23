@@ -35,6 +35,8 @@
       ...
     <?php endif; ?>
   </span>
-  <!-- <span class="bigscreen__info__qrcode-text">Für mehr Informationen QR-Code scannen</span> -->
-  <img class="bigscreen__footer__qrcode" src="<?php echo $qrcode ?>" alt="QR Code">
+  <section class="bigscreen__footer__qrcode flex">
+    <span class="bigscreen__footer__qrcode__text">Für mehr Informationen QR-Code scannen</span>
+    <img class="bigscreen__footer__qrcode__image" src="<?php echo $qrcode ?>" alt="QR Code">
+  </section>
 </section>

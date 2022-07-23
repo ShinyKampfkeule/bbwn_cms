@@ -87,7 +87,20 @@
             position: absolute;
             right: 0;
             height: 100%;
-            width: 16em;
+            width: 27em;
+
+            &__text {
+                bottom: 0;
+                padding-left: .5em;
+                padding-bottom: .1em;
+                font-weight: var(--fw-700);
+                width: calc(100% - 8em);
+                font-size: var(--fs-text-200);
+            }
+
+            &__image {
+                width: 11em;
+            }
         }
 
         &__wop {
