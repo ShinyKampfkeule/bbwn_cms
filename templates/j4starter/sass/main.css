@@ -1292,7 +1292,7 @@ iframe {
 }
 .bigscreen__footer__heading {
   padding-left: 1%;
-  width: 15%;
+  width: clamp(15%, 5em, 15em);
 }
 .bigscreen__footer__article-text {
   font-size: var(--fs-text-300);

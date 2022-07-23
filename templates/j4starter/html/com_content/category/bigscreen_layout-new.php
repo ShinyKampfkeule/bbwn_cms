@@ -28,8 +28,8 @@
 <section class="flex bigscreen__footer width-100">
   <h1 class="bigscreen__footer__heading"><?php echo $article -> title ?></h1>
   <span class="bigscreen__footer__article-text">
-    <?php echo substr($article -> jcfields[3] -> rawvalue, 0, 400) ?>
-    <?php if (strlen($article -> jcfields[3] -> rawvalue) > 400) : ?>
+    <?php echo substr($article -> jcfields[3] -> rawvalue, 0, 270) ?>
+    <?php if (strlen($article -> jcfields[3] -> rawvalue) > 270) : ?>
       ...
     <?php endif; ?>
   </span>
