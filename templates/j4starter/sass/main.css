@@ -1292,6 +1292,19 @@ iframe {
 }
 .bigscreen__footer__heading {
   padding-left: 1%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: clamp(var(--fs-text-100), var(--fs-text-200), var(fs-text-300));
+}
+.bigscreen__footer__heading::after {
+  content: "";
+  height: 90%;
+  width: 0.25em;
+  background-color: var(--accent-300);
+  opacity: 50%;
+  margin-left: 1em;
 }
 .bigscreen__footer__article-text {
   font-size: var(--fs-text-300);
