@@ -1296,7 +1296,6 @@ iframe {
   align-items: center;
   display: flex;
   justify-content: center;
-  font-size: clamp(var(--fs-text-100), var(--fs-text-200), var(fs-text-300));
 }
 .bigscreen__footer__heading::after {
   content: "";

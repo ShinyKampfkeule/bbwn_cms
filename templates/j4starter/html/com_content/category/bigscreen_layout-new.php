@@ -30,8 +30,8 @@
     <h1><?php echo $article -> title ?></h1>
   </section>
   <span class="bigscreen__footer__article-text">
-    <?php echo substr($article -> jcfields[3] -> rawvalue, 0, 270) ?>
-    <?php if (strlen($article -> jcfields[3] -> rawvalue) > 270) : ?>
+    <?php echo substr($article -> jcfields[3] -> rawvalue, 0, 345) ?>
+    <?php if (strlen($article -> jcfields[3] -> rawvalue) > 345) : ?>
       ...
     <?php endif; ?>
   </span>
