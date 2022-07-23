@@ -1282,7 +1282,7 @@ iframe {
   -webkit-filter: blur(var(--blur));
 }
 .bigscreen__footer {
-  background-color: var(--main-400-trans-750);
+  background-color: var(--main-400-trans-900);
   position: absolute;
   bottom: 0;
   height: 10em;
