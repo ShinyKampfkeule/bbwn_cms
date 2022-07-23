@@ -14,6 +14,7 @@
   --fs-head-800: 4em;
   --fs-head-600: 3em;
   --fs-head-400: 2em;
+  --fs-text-400: 1.8em;
   --fs-text-300: 1.5em;
   --fs-text-200: 1.3em;
   --fs-text-190: 1.2em;
@@ -1296,6 +1297,7 @@ iframe {
   align-items: center;
   display: flex;
   justify-content: center;
+  max-width: 22%;
 }
 .bigscreen__footer__heading::after {
   content: "";
@@ -1305,11 +1307,19 @@ iframe {
   opacity: 50%;
   margin-left: 1em;
 }
+.bigscreen__footer__heading__small {
+  font-size: var(--fs-text-400);
+}
+.bigscreen__footer__heading__big {
+  font-size: var(--fs-head-400);
+}
 .bigscreen__footer__article-text {
   font-size: var(--fs-text-300);
-  padding: 1em;
-  width: 50%;
+  padding-left: 1em;
+  padding-top: 0.2em;
+  width: 45%;
   line-height: 1.5em;
+  height: 100%;
 }
 .bigscreen__footer__image {
   width: 35em;

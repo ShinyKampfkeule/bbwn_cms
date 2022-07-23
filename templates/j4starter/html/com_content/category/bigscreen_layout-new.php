@@ -18,6 +18,8 @@
   $chl = urlencode("{$url_name}/index.php?option=com_content&view=article&view=article&id={$url_id}");
   $choe = "UTF-8";
   $qrcode = "https://chart.googleapis.com/chart?cht={$cht}&chs={$chs}&chl={$chl}&choe={$choe}";
+  $toReplace = array("Doktor", "Professor");
+  $replaceWith = array("Dr.", "Prof.");
 ?>
 
 <img class="bigscreen__layoutwp__bgimg" src="<?php echo $bgimg ?>" alt="Slide <?php echo $key + 1 ?>">
@@ -27,11 +29,11 @@
             </svg>
 <section class="flex bigscreen__footer width-100">
   <section class="bigscreen__footer__heading">
-    <h1><?php echo $article -> title ?></h1>
+    <h1 class="bigscreen__footer__heading__<?php echo (strlen($article -> title) >= 60) ? 'small' : 'big' ?>"><?php echo str_replace($toReplace, $replaceWith, $article -> title) ?></h1>
   </section>
   <span class="bigscreen__footer__article-text">
-    <?php echo substr($article -> jcfields[3] -> rawvalue, 0, 345) ?>
-    <?php if (strlen($article -> jcfields[3] -> rawvalue) > 345) : ?>
+    <?php echo substr($article -> jcfields[3] -> rawvalue, 0, 290) ?>
+    <?php if (strlen($article -> jcfields[3] -> rawvalue) > 290) : ?>
       ...
     <?php endif; ?>
   </span>

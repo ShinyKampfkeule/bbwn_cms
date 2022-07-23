@@ -47,6 +47,7 @@
             align-items: center;
             display: flex;
             justify-content: center;
+            max-width: 22%;
 
             &::after {
                 content: "";
@@ -56,13 +57,23 @@
                 opacity: 50%;
                 margin-left: 1em;
             }
+
+            &__small {
+                font-size: var(--fs-text-400);
+            }
+
+            &__big {
+                font-size: var(--fs-head-400);
+            }
         }
 
         &__article-text {
             font-size: var(--fs-text-300);
-            padding: 1em;
-            width: 50%;
+            padding-left: 1em;
+            padding-top: .2em;
+            width: clamp(30%, 45%, 50%);
             line-height: 1.5em;
+            height: 100%;
         }
 
         &__image {
