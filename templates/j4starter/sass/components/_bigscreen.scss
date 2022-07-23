@@ -47,7 +47,7 @@
             align-items: center;
             display: flex;
             justify-content: center;
-            max-width: 22%;
+            max-width: 15%;
 
             &::after {
                 content: "";
@@ -59,18 +59,18 @@
             }
 
             &__small {
-                font-size: var(--fs-text-400);
+                font-size: var(--fs-text-300);
             }
 
             &__big {
-                font-size: var(--fs-head-400);
+                font-size: var(--fs-text-400);
             }
         }
 
         &__article-text {
             font-size: var(--fs-text-300);
             padding-left: 1em;
-            padding-top: .2em;
+            padding-top: 1em;
             width: clamp(30%, 45%, 50%);
             line-height: 1.5em;
             height: 100%;

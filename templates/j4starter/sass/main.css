@@ -1297,7 +1297,7 @@ iframe {
   align-items: center;
   display: flex;
   justify-content: center;
-  max-width: 22%;
+  max-width: 15%;
 }
 .bigscreen__footer__heading::after {
   content: "";
@@ -1308,15 +1308,15 @@ iframe {
   margin-left: 1em;
 }
 .bigscreen__footer__heading__small {
-  font-size: var(--fs-text-400);
+  font-size: var(--fs-text-300);
 }
 .bigscreen__footer__heading__big {
-  font-size: var(--fs-head-400);
+  font-size: var(--fs-text-400);
 }
 .bigscreen__footer__article-text {
   font-size: var(--fs-text-300);
   padding-left: 1em;
-  padding-top: 0.2em;
+  padding-top: 1em;
   width: 45%;
   line-height: 1.5em;
   height: 100%;
