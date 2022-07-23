@@ -87,19 +87,23 @@
             position: absolute;
             right: 0;
             height: 100%;
-            width: 27em;
+            width: 26em;
 
             &__text {
                 bottom: 0;
-                padding-left: .5em;
-                padding-bottom: .1em;
+                padding-right: .5em;
+                padding-top: .3em;
                 font-weight: var(--fw-700);
-                width: calc(100% - 8em);
+                width: calc(100% - 7.5em);
                 font-size: var(--fs-text-200);
+                text-align: end;
             }
 
             &__image {
-                width: 11em;
+                width: 9em;
+                height: 9em;
+                align-self: center;
+                border-radius: 10px;
             }
         }
 

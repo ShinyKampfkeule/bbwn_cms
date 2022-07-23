@@ -1330,18 +1330,22 @@ iframe {
   position: absolute;
   right: 0;
   height: 100%;
-  width: 27em;
+  width: 26em;
 }
 .bigscreen__footer__qrcode__text {
   bottom: 0;
-  padding-left: 0.5em;
-  padding-bottom: 0.1em;
+  padding-right: 0.5em;
+  padding-top: 0.3em;
   font-weight: var(--fw-700);
-  width: calc(100% - 8em);
+  width: calc(100% - 7.5em);
   font-size: var(--fs-text-200);
+  text-align: end;
 }
 .bigscreen__footer__qrcode__image {
-  width: 11em;
+  width: 9em;
+  height: 9em;
+  align-self: center;
+  border-radius: 10px;
 }
 .bigscreen__footer__wop {
   left: 0.5em;
