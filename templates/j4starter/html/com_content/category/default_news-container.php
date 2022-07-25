@@ -17,9 +17,11 @@
                 ?>
             <?php endif; ?>
             <?php
-                $r = rand(0, 255);
-                $g = rand(0, 255);
-                $b = rand(0, 255);
+                $colorArray = array(array(223, 72, 7), array(0, 22, 36), array(0, 204, 0), array(255, 77, 77), array(46, 184, 184));
+                $randomColour = array_rand($colorArray, 1);
+                $r = $colorArray[$randomColour][0];
+                $g = $colorArray[$randomColour][1];
+                $b = $colorArray[$randomColour][2];
                 $url_id = $article -> id;
                 $chl = "index.php?option=com_content&view=article&id={$url_id}";
             ?>
