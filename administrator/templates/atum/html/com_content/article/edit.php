@@ -66,6 +66,9 @@ $tmpl    = $isModal || $input->get('tmpl', '', 'cmd') === 'component' ? '&tmpl=c
 
 		<?php echo HTMLHelper::_('uitab.addTab', 'myTab', 'general', Text::_('COM_CONTENT_ARTICLE_CONTENT')); ?>
 		<div class="row">
+			<div class="col-lg-3">
+				<?php echo LayoutHelper::render('joomla.edit.global', $this); ?>
+			</div>
 			<div class="col-lg-9">
 				<div>
 					<fieldset class="adminform">
@@ -73,9 +76,6 @@ $tmpl    = $isModal || $input->get('tmpl', '', 'cmd') === 'component' ? '&tmpl=c
 						<?php echo $this->form->renderField('articletext'); ?>
 					</fieldset>
 				</div>
-			</div>
-			<div class="col-lg-3">
-				<?php echo LayoutHelper::render('joomla.edit.global', $this); ?>
 			</div>
 		</div>
 
