@@ -33,7 +33,6 @@ $fieldsetsInLinks = ['linka', 'linkb', 'linkc'];
 $this->ignore_fieldsets = array_merge(array('jmetadata', 'item_associations'), $fieldsetsInImages, $fieldsetsInLinks);
 $this->useCoreUI = true;
 
-
 // Create shortcut to parameters.
 $params = clone $this->state->get('params');
 $params->merge(new Registry($this->item->attribs));
@@ -70,8 +69,8 @@ $tmpl    = $isModal || $input->get('tmpl', '', 'cmd') === 'component' ? '&tmpl=c
 			<div class="col-lg-9">
 				<div>
 					<fieldset class="adminform">
-						<?php echo $this->form->getLabel('articletext'); ?>
-						<?php echo $this->form->getInput('articletext'); ?>
+						<?php $this->form->setFieldAttribute('articletext', 'type', 'hidden'); ?>
+						<?php echo $this->form->renderField('articletext'); ?>
 					</fieldset>
 				</div>
 			</div>
