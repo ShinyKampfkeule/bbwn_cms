@@ -26,18 +26,23 @@
                 $chl = "index.php?option=com_content&view=article&id={$url_id}";
             ?>
             <section class="article-list__small-article" onClick="location.href='<?php echo $chl ?>'" style="background-color:rgba(<?php echo $r ?>, <?php echo $g ?>, <?php echo $b ?>)">
-                <?php if ($imageExists !== FALSE) : ?>
+                <?php if ($imageExists) : ?>
                     <picture class="article-list__small-article__image">
                         <img src="<?php echo $bild ?>" />
                     </picture>
                 <?php endif; ?>
-                <h2 class="heading-400 article-list__small-article__heading">
+                <h2 class="<?php echo ($imageExists) ? "article-list__small-article__heading" : "article-list__small-article__alternate__heading" ?>">
                     <?php if ( strlen ( $article -> title ) > 45 ) : ?>
                         <?php echo substr ( $article -> title, 0, 45 ); ?> ...
                     <?php else : ?>
                         <?php echo $article -> title ?>
                     <?php endif; ?>
                 </h2>
+                <?php if (!$imageExists) : ?>
+                    <p class="article-list__small-article__alternate__text">
+                        <?php echo substr ( $article -> jcfields [ 3 ] -> value, 0, 200 ) ?> ...
+                    </p>
+                <?php endif; ?>
             </section>
         <?php endif; ?>
     <?php endforeach; ?>

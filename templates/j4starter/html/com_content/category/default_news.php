@@ -50,8 +50,10 @@
 	$url_id = $bigArticle -> id;
 	$chl = "index.php?option=com_content&view=article&id={$url_id}";
 ?>
-<section class="article-list__nav__container flex">
+
+<section class="article-list__nav_fixed flex">
 	<h1 class="article-list__nav__header"><?php echo $this -> escape( $this -> params -> get ( 'page_heading' ) ) ; ?></h1>	
+	<section class="article-list__nav__container flex">
 	<ul class="article-list__nav nav" id="myTab" role="tablist">
 		<li class="nav-item" role="presentation">
 			<button class="nav-link active article-list__nav__link" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">Alle</button>
@@ -62,6 +64,7 @@
 			</li>	
 		<?php endforeach; ?>
 	</ul>
+</section>
 </section>
 <section class="article-list__top-article" onClick="location.href='<?php echo $chl ?>'">
 	<?php if ( json_decode ( $bigArticle -> jcfields[4] -> rawvalue ) -> filename !== "" ): ?>

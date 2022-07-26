@@ -3,8 +3,14 @@
     &__nav {
         justify-content: end;
         font-size: var(--fs-text-200);
-        width: 47%;
-        align-items: end;
+        width: 100%;
+        align-items: center;
+
+        &__fixed {
+            position: fixed;
+            background-color: var(--accent-100);
+            width: 87.4%;
+        }
 
         &__header {           
             padding-top: .2em;
@@ -15,10 +21,7 @@
 
         &__container {
 
-            background-color: var(--accent-100);
-            position: fixed;
-            z-index: 5;
-            width: 100%;
+            width: 60%;
         }
 
         &__link {
@@ -134,7 +137,28 @@
             background-color: var(--accent-700-trans-750);
             width: 100%;
             text-align: left;
-            padding: .2em;
+            padding-top: .3em;
+            padding-bottom: .3em;
+            padding-left: .5em;
+            font-size: var(--fs-text-300);
+        }
+
+        &__alternate {
+
+            &__heading {
+                color: var(--accent-100);
+                font-size: var(--fs-text-300);
+                padding-left: .5em;
+                padding-top: .5em;
+            }
+    
+            &__text {
+                color: var(--accent-100);
+                font-size: var(--fs-text-190);
+                width: 80%;
+                padding-left: .5em;
+                padding-top: .5em;
+            }
         }
     }
 
