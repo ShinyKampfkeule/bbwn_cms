@@ -51,7 +51,7 @@
 	$chl = "index.php?option=com_content&view=article&id={$url_id}";
 ?>
 
-<section class="article-list__nav_fixed flex">
+<section class="article-list__nav__fixed flex">
 	<h1 class="article-list__nav__header"><?php echo $this -> escape( $this -> params -> get ( 'page_heading' ) ) ; ?></h1>	
 	<section class="article-list__nav__container flex">
 	<ul class="article-list__nav nav" id="myTab" role="tablist">
