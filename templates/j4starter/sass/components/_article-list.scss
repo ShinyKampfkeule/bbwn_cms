@@ -10,6 +10,7 @@
             position: fixed;
             background-color: var(--accent-100);
             width: 87.4%;
+            z-index: 1;
         }
 
         &__header {           
@@ -65,6 +66,7 @@
         aspect-ratio: 2 / 1;
         cursor: pointer;
         margin-bottom: 2em;
+        top: 5em;
 
         &:hover {
 
@@ -97,9 +99,30 @@
             background-color: var(--accent-700-trans-750);
             width: 100%;
 
-            p {
+            &__alternate {
+                color: var(--accent-100);
+                padding: 2em;
+                width: 100%;
+            }
+
+            &__heading {
+                font-size: var(--fs-head-400);
+            }
+
+            &__heading-alternate {
+                font-size: var(--fs-head-600);
+            }
+
+            &__text {
                 width: 90%;
                 margin-top: .5em;
+                font-size: var(--fs-text-200);
+            }
+
+            &__text-alternate {
+                width: 50%;
+                margin-top: 2em;
+                font-size: var(--fs-text-300);
             }
         }
     }
@@ -189,6 +212,11 @@
             margin-right: auto;
             margin-top: .2em;
         }
+    }
+
+    &__tab-content {
+        position: relative;
+        top: 5em;
     }
 }
 

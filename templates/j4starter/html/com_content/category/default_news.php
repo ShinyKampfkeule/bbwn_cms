@@ -38,11 +38,7 @@
 	}
 ?>
 <?php 
-	$comp_img = "";
-	while ($comp_img === "") {
-		$bigArticle = $this -> items [ $ranNumber ];
-		$comp_img = json_decode ( $bigArticle -> jcfields[4] -> rawvalue ) -> filename;
-	}
+	$bigArticle = $this -> items [ $ranNumber ];
 	$url_name = $_SERVER['SERVER_NAME']; 
 	if ( $url_name !== "localhost" ) {
 	$url_name = "{$url_name}/kevin";
@@ -66,26 +62,30 @@
 	</ul>
 </section>
 </section>
-<section class="article-list__top-article" onClick="location.href='<?php echo $chl ?>'">
-	<?php if ( json_decode ( $bigArticle -> jcfields[4] -> rawvalue ) -> filename !== "" ): ?>
+<?php if ( json_decode ( $bigArticle -> jcfields[4] -> rawvalue ) -> filename !== "" ): ?>
 		<?php 
 			$id = json_decode( $bigArticle -> jcfields[4] -> rawvalue ) -> itemId;
 			$name = json_decode( $bigArticle -> jcfields[4] -> rawvalue ) -> filename;
 			$bigBild = "images/econa/fields/4/com_content_article/{$id}/{$name}_L.jpg";
 		?>
 	<?php else: ?>
-		<?php 
-			$bigBild = "images/placeholder/1575466871112.jfif";
+		<?php
+			$colorArray = array(array(223, 72, 7), array(0, 22, 36), array(0, 204, 0), array(255, 77, 77), array(46, 184, 184));
+			$randomColour = array_rand($colorArray, 1);
+			$r = $colorArray[$randomColour][0];
+			$g = $colorArray[$randomColour][1];
+			$b = $colorArray[$randomColour][2]; 
 		?>
 	<?php endif; ?>
+<section class="article-list__top-article" onClick="location.href='<?php echo $chl ?>'" style="background-color:rgba(<?php echo $r ?>, <?php echo $g ?>, <?php echo $b ?>)">
 	<picture class="article-list__top-article__image">
 		<img src="<?php echo $bigBild ?>" />
 	</picture>
-	<section class="article-list__top-article__content">
-		<h2 class="heading-400">
+	<section class="article-list__top-article__content<?php echo ( json_decode ( $bigArticle -> jcfields[4] -> rawvalue ) -> filename !== '' ) ? '' : '__alternate' ?>">
+		<h2 class="article-list__top-article__content__heading<?php echo ( json_decode ( $bigArticle -> jcfields[4] -> rawvalue ) -> filename !== '' ) ? '' : '-alternate' ?>">
 			<?php echo ( $bigArticle -> title ) ?>
 		</h2>
-		<p class="text-100">
+		<p class="article-list__top-article__content__text<?php echo ( json_decode ( $bigArticle -> jcfields[4] -> rawvalue ) -> filename !== '' ) ? '' : '-alternate' ?>">
 			<?php if ( strlen ( $bigArticle -> jcfields[3] -> rawvalue ) > 390 ) : ?>
 				<?php echo substr ( $bigArticle -> jcfields[3] -> rawvalue, 0, 390 ); ?> ...
 			<?php else : ?>
@@ -94,7 +94,7 @@
 		</p>
 	</section>
 </section>
-<div class="tab-content" id="myTabContent">
+<div class="tab-content article-list__tab-content" id="myTabContent">
 	<div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
 		<?php 
 			$catEntry = array("alle", "Alle");
